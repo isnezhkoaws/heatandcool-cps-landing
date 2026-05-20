@@ -1,0 +1,2028 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Heat &amp; Cool | CPS Extended Warranty</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<style>
+			/* ==========================================================================
+   Reset
+   ========================================================================== */
+
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+			}
+
+			html,
+			body,
+			div,
+			span,
+			applet,
+			object,
+			iframe,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			p,
+			blockquote,
+			pre,
+			a,
+			abbr,
+			acronym,
+			address,
+			big,
+			cite,
+			code,
+			del,
+			dfn,
+			em,
+			img,
+			ins,
+			kbd,
+			q,
+			s,
+			samp,
+			small,
+			strike,
+			strong,
+			sub,
+			sup,
+			tt,
+			var,
+			b,
+			u,
+			i,
+			center,
+			dl,
+			dt,
+			dd,
+			ol,
+			ul,
+			li,
+			fieldset,
+			form,
+			label,
+			legend,
+			table,
+			caption,
+			tbody,
+			tfoot,
+			thead,
+			tr,
+			th,
+			td,
+			article,
+			aside,
+			canvas,
+			details,
+			embed,
+			figure,
+			figcaption,
+			footer,
+			header,
+			hgroup,
+			menu,
+			nav,
+			output,
+			ruby,
+			section,
+			summary,
+			time,
+			mark,
+			audio,
+			video {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-size: 100%;
+				font: inherit;
+				vertical-align: baseline;
+			}
+
+			article,
+			aside,
+			details,
+			figcaption,
+			figure,
+			footer,
+			header,
+			hgroup,
+			menu,
+			nav,
+			section {
+				display: block;
+			}
+
+			ol,
+			ul {
+				list-style: none;
+			}
+
+			blockquote,
+			q {
+				quotes: none;
+			}
+
+			blockquote::before,
+			blockquote::after,
+			q::before,
+			q::after {
+				content: "";
+				content: none;
+			}
+
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			img,
+			picture,
+			video,
+			canvas,
+			svg {
+				display: block;
+				max-width: 100%;
+				height: auto;
+			}
+
+			button,
+			input,
+			select,
+			textarea {
+				font: inherit;
+				color: inherit;
+				margin: 0;
+			}
+
+			button {
+				cursor: pointer;
+				background: none;
+				border: none;
+				padding: 0;
+			}
+
+			button:disabled {
+				cursor: not-allowed;
+			}
+
+			input,
+			textarea,
+			select {
+				border-radius: 0;
+			}
+
+			strong,
+			b {
+				font-weight: 700;
+			}
+
+			em,
+			i {
+				font-style: italic;
+			}
+
+			/* ==========================================================================
+   Tokens
+   ========================================================================== */
+
+			:root {
+				--color-orange: #e44d26;
+				--color-teal: #1cb5b3;
+				--color-teal-light: #e8f7f7;
+				--color-navy: #102a43;
+				--color-text: #334e68;
+				--color-heading: #243b53;
+				--color-white: #fff;
+				--color-black: #000;
+				--color-border: #d9e2ec;
+				--color-border-light: #f0f4f8;
+				--container-max: 1200px;
+				--header-container: 1920px;
+				--action-container: 1300px;
+				--categories-container: 1200px;
+				--footer-container: 1350px;
+				--header-height: 72px;
+
+				--font-sans:
+					"Oswald", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+					Helvetica, Arial, sans-serif;
+				--font-inter: "Inter", sans-serif;
+				--font-poppins: "Poppins", sans-serif;
+
+				--gutter: 20px;
+				--bp-tablet: 768px;
+				--bp-desktop: 992px;
+				--bp-header: 1200px;
+
+				--transition-fast: 0.2s ease;
+				--transition-base: 0.3s ease-in-out;
+				--transition-slow: 0.8s ease-in-out;
+			}
+
+			/* ==========================================================================
+   Base
+   ========================================================================== */
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			body {
+				font-family: var(--font-sans);
+				font-size: 16px;
+				line-height: 1.5;
+				color: var(--color-text);
+				background: var(--color-white);
+			}
+
+			/* Shared layout shells */
+			.container,
+			.header-container,
+			.action-container,
+			.categories-container {
+				width: 100%;
+				margin-inline: auto;
+				padding-inline: var(--gutter);
+			}
+
+			.container {
+				max-width: var(--container-max);
+			}
+
+			.header-container {
+				max-width: var(--header-container);
+			}
+
+			.action-container {
+				max-width: var(--action-container);
+			}
+
+			.categories-container {
+				max-width: var(--categories-container);
+			}
+
+			.footer-container {
+				max-width: var(--footer-container);
+				width: 100%;
+			}
+			/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+			.btn,
+			.btn_2 {
+				display: inline-block;
+				padding: 12px 30px;
+				font-size: 14px;
+				font-weight: 700;
+				letter-spacing: 0.04em;
+				text-transform: uppercase;
+				border-radius: 4px;
+				border: none;
+				cursor: pointer;
+				transition: opacity var(--transition-fast);
+			}
+
+			.btn {
+				min-width: 270px;
+			}
+
+			.btn_2 {
+				padding: 6px 10px;
+				min-width: 110px;
+				text-align: center;
+			}
+
+			.btn:hover,
+			.btn_2:hover {
+				opacity: 0.9;
+			}
+
+			.btn-primary {
+				background: var(--color-orange);
+				color: var(--color-white);
+			}
+
+			/* ==========================================================================
+   Section typography & dividers
+   ========================================================================== */
+
+			.section-kicker {
+				font-family: var(--font-inter);
+				margin: 0 0 8px;
+				font-size: 13px;
+				font-weight: 700;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				color: var(--color-orange);
+				text-align: center;
+			}
+
+			.section-title {
+				margin: 0 0 17px;
+				font-size: 30px;
+				font-weight: 300;
+				text-transform: uppercase;
+				color: var(--color-heading);
+				text-align: center;
+				line-height: 1.2;
+			}
+
+			.section-desc {
+				font-family: var(--font-inter);
+				margin: 0 auto 29px;
+				max-width: 520px;
+				font-size: 17px;
+				text-align: center;
+				color: var(--color-text);
+			}
+
+			.section-intro {
+				margin-top: 10px;
+			}
+
+			.section-divider {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 16px;
+				padding: 26px 0 24px;
+				position: relative;
+			}
+
+			.divider-line {
+				flex: 1;
+				height: 1px;
+				background: var(--color-border);
+			}
+
+			.divider-label {
+				border-block: 1px solid var(--color-black);
+				padding: 2px 8px;
+				text-align: center;
+				position: absolute;
+				background: var(--color-white);
+				top: 21%;
+				left: 50%;
+				font-size: 16px;
+				transform: translateX(-50%) rotate(-15deg);
+			}
+
+			.divider-logo {
+				width: 32px;
+				flex-shrink: 0;
+			}
+
+			/* ==========================================================================
+   Header
+   ========================================================================== */
+
+			.site-header {
+				position: sticky;
+				top: 0;
+				z-index: 100;
+				background: var(--color-white);
+				box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+			}
+
+			.header-inner {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				min-height: 62px;
+				gap: 16px;
+			}
+
+			.header-logos {
+				display: flex;
+				align-items: center;
+				gap: 18px;
+				flex-shrink: 0;
+			}
+
+			.logo-heat {
+				height: 32px;
+				width: auto;
+			}
+
+			.logo-cps {
+				height: 22px;
+				width: auto;
+			}
+
+			.nav-desktop,
+			.nav-desktop_2 {
+				display: none;
+				align-items: center;
+			}
+
+			.nav-desktop {
+				flex: 1;
+				justify-content: center;
+				min-width: 0;
+			}
+
+			.nav-desktop_2 {
+				flex-shrink: 0;
+				justify-content: flex-end;
+			}
+
+			.nav-primary,
+			.nav-secondary {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+			}
+
+			.nav-primary a,
+			.nav-secondary a {
+				font-family: var(--font-inter);
+				text-transform: uppercase;
+				white-space: nowrap;
+			}
+
+			.nav-primary a {
+				font-size: 11px;
+				font-weight: 700;
+				letter-spacing: 0.04em;
+				color: var(--color-orange);
+			}
+
+			.nav-secondary a {
+				font-size: 12px;
+				font-weight: 600;
+				color: var(--color-heading);
+			}
+
+			.nav-primary a:hover,
+			.nav-secondary a:hover {
+				text-decoration: underline;
+			}
+
+			.nav-toggle {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				gap: 5px;
+				width: 40px;
+				height: 40px;
+				padding: 8px;
+				flex-shrink: 0;
+			}
+
+			.nav-toggle-bar {
+				display: block;
+				width: 100%;
+				height: 2px;
+				background: var(--color-heading);
+				border-radius: 1px;
+				transition:
+					transform var(--transition-base),
+					opacity var(--transition-base);
+			}
+
+			.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+				transform: translateY(7px) rotate(45deg);
+			}
+
+			.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+				opacity: 0;
+			}
+
+			.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+				transform: translateY(-7px) rotate(-45deg);
+			}
+
+			.nav-mobile {
+				overflow: hidden;
+				max-height: 0;
+				opacity: 0;
+				background: var(--color-white);
+				border-top: 1px solid var(--color-border);
+				transition:
+					max-height 0.35s ease,
+					opacity var(--transition-base);
+			}
+
+			.nav-mobile.is-open {
+				max-height: 480px;
+				opacity: 1;
+			}
+
+			.nav-mobile ul {
+				padding: 12px 0 20px;
+			}
+
+			.nav-mobile li + li {
+				border-top: 1px solid var(--color-border-light);
+			}
+
+			.nav-mobile a {
+				display: block;
+				padding: 12px 0;
+				font-size: 13px;
+				font-weight: 600;
+				text-transform: uppercase;
+				color: var(--color-orange);
+			}
+
+			.nav-mobile li:nth-child(n + 5) a {
+				color: var(--color-heading);
+				font-size: 12px;
+			}
+
+			/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+			.hero {
+				position: relative;
+				display: flex;
+				align-items: flex-start;
+				min-height: 757px;
+				padding: 27px 0 56px;
+				color: var(--color-white);
+				overflow: hidden;
+			}
+
+			.hero-bg {
+				position: absolute;
+				inset: 0;
+				background: url("images/main_hero.jpg") center / cover no-repeat;
+				z-index: 0;
+			}
+
+			.hero-overlay {
+				position: absolute;
+				inset: 0;
+				z-index: 1;
+				background: radial-gradient(
+					ellipse 80% 80% at 50% 50%,
+					rgba(0, 0, 0, 0.6) 0%,
+					rgba(0, 0, 0, 0.3) 50%,
+					rgba(0, 0, 0, 0.15) 100%
+				);
+			}
+
+			.hero-content {
+				position: relative;
+				z-index: 2;
+				max-width: 720px;
+				margin-inline: auto;
+				text-align: center;
+			}
+
+			.hero-badge {
+				font-family: var(--font-inter);
+				display: inline-block;
+				margin: 0 0 27px;
+				padding: 8px 16px;
+				font-size: 11px;
+				font-weight: 600;
+				letter-spacing: 0.02em;
+				text-transform: uppercase;
+				color: var(--color-heading);
+				background: var(--color-white);
+				border-radius: 999px;
+			}
+
+			.hero-title {
+				font-family: var(--font-sans);
+				margin: 0 0 24px;
+				font-size: 28px;
+				font-weight: 400;
+				line-height: 1.3;
+				text-transform: uppercase;
+			}
+
+			.hero-features {
+				display: grid;
+				grid-template-columns: 1fr;
+				width: 100%;
+				max-width: max-content;
+				margin: 0 auto 44px;
+				row-gap: 14px;
+			}
+
+			.hero-features .icon {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 22px;
+				height: 22px;
+				background-color: var(--color-teal);
+				border-radius: 8px;
+			}
+
+			.hero-features .icon img {
+				max-width: 12px;
+				max-height: 12px;
+			}
+
+			.hero-features li {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				font-size: 18px;
+				font-weight: 400;
+				letter-spacing: 0.8px;
+				line-height: 1;
+
+			}
+
+			.hero-icon {
+				width: 33px;
+				height: 33px;
+				flex-shrink: 0;
+			}
+
+			/* ==========================================================================
+   Features bar
+   ========================================================================== */
+
+			.features-section {
+				padding: 10px 0 0;
+				background: var(--color-white);
+			}
+
+			.features-kicker {
+				padding-top: 8px;
+			}
+
+			.features-bar {
+				margin-top: 16px;
+			}
+
+			.features-grid {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 20px;
+				padding: 20px var(--gutter);
+				margin-bottom: 30px;
+			}
+
+			.feature-item {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 12px;
+			}
+
+			.feature-icon {
+				width: 52px;
+				height: 52px;
+				flex-shrink: 0;
+			}
+
+			.feature-item p {
+				margin: 0;
+				font-size: 18px;
+				letter-spacing: 0.04em;
+				text-transform: uppercase;
+				color: var(--color-heading);
+				line-height: 1.35;
+			}
+
+			/* ==========================================================================
+   Coverage / action cards
+   ========================================================================== */
+
+			.coverage-section {
+				margin-bottom: 22px;
+				padding-bottom: 44px;
+			}
+
+			.categories-section {
+				margin-bottom: 0;
+				padding-bottom: 44px;
+			}
+
+			.categories-section .section-title {
+				max-width: 270px;
+				margin: 15px auto;
+			}
+
+			.action-cards {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 16px;
+				margin-top: 30px;
+				padding-inline: 30px;
+			}
+
+			.action-card {
+				position: relative;
+				display: flex;
+				align-items: flex-end;
+				min-height: 220px;
+				border-radius: 4px;
+				overflow: hidden;
+			}
+
+			.action-card-bg {
+				position: absolute;
+				inset: 0;
+				background: center / cover no-repeat;
+				z-index: 0;
+				transform: scale(1);
+				transform-origin: center;
+				transition: transform var(--transition-slow);
+			}
+
+			.action-card--claims .action-card-bg {
+				background-image: url("images/warranty_claims.jpg");
+			}
+
+			.action-card--contact .action-card-bg {
+				background-image: url("images/contact_support.jpg");
+			}
+
+			.action-card--register .action-card-bg {
+				background-image: url("images/register_your_products.jpg");
+			}
+
+			.action-card:hover .action-card-bg {
+				transform: scale(1.25);
+			}
+
+			.action-card-overlay {
+				position: absolute;
+				inset: 0;
+				z-index: 1;
+				background: linear-gradient(
+					135deg,
+					rgba(0, 0, 0, 0.4) 0%,
+					rgba(0, 0, 0, 0.25) 35%,
+					transparent 55%
+				);
+				pointer-events: none;
+			}
+
+			.action-card-content {
+				position: relative;
+				z-index: 2;
+				width: 100%;
+				padding: 15px;
+				margin-bottom: auto;
+			}
+
+			.action-card h3 {
+				margin: 0 0 16px;
+				font-size: 28px;
+				font-weight: 400;
+				letter-spacing: 0.02em;
+				text-transform: uppercase;
+				line-height: 1.2;
+				color: var(--color-white);
+			}
+
+			/* ==========================================================================
+   Categories
+   ========================================================================== */
+
+			.categories-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 24px 0;
+				margin-top: 30px;
+				padding-bottom: 16px;
+			}
+
+			.category-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				gap: 10px;
+			}
+
+			.category-icon {
+				width: 100%;
+				max-width: 90px;
+				color: var(--color-heading);
+				transition: color var(--transition-base);
+			}
+
+			.category-item:hover .category-icon {
+				color: var(--color-teal);
+			}
+
+			.category-item p {
+				margin: 0;
+				max-width: 140px;
+				font-size: 11px;
+				font-weight: 400;
+				letter-spacing: 0.01em;
+				text-transform: uppercase;
+				color: var(--color-heading);
+				line-height: 1.35;
+			}
+
+			/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+			.site-footer {
+				padding: 40px 0 24px;
+				background: var(--color-navy);
+				color: var(--color-white);
+			}
+
+			.footer-inner {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+				text-align: center;
+			}
+
+			.footer-logos {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 24px;
+			}
+
+			.footer-logo,
+			.footer-logo-cps {
+				width: auto;
+				max-height: 40px;
+			}
+
+			.footer-contact p {
+				font-family: var(--font-poppins);
+				font-weight: 600;
+				margin: 0;
+				font-size: 14px;
+				line-height: 1.8;
+			}
+
+			.footer-contact a {
+				color: var(--color-white);
+				text-decoration: underline;
+				text-underline-offset: 2px;
+			}
+
+			.footer-contact a:hover {
+				opacity: 0.85;
+			}
+
+			.footer-sep {
+				display: none;
+			}
+
+			.footer-contact-inner {
+				text-align: left;
+			}
+
+			.footer-contact-inner p {
+				font-size: 18px;
+			}
+
+			.footer-contact-inner p:not(:first-child) {
+				margin-top: 10px;
+			}
+
+			/* ==========================================================================
+   Tablet (768px+)
+   ========================================================================== */
+
+			@media (min-width: 768px) {
+				.btn {
+					min-width: auto;
+					padding: 14px 50px;
+				}
+
+				.btn_2 {
+					padding: 14px 30px;
+					min-width: 140px;
+				}
+
+				.section-intro {
+					margin-top: 40px;
+				}
+
+				.section-title {
+					margin-bottom: 12px;
+					font-size: clamp(22px, 4vw, 32px);
+				}
+
+				.section-desc {
+					margin-bottom: 32px;
+				}
+
+				.hero {
+					align-items: center;
+					min-height: 680px;
+					padding: 64px 0 72px;
+				}
+
+				.hero-badge {
+					margin-bottom: 30px;
+					font-size: 14px;
+					letter-spacing: 0.3px;
+				}
+
+				.hero-title {
+					font-size: 60px;
+					font-weight: 500;
+					line-height: 1.15;
+					letter-spacing: -0.06px;
+				}
+
+				.hero-features {
+					grid-template-columns: repeat(2, 1fr);
+					column-gap: 44px;
+				}
+
+				.hero-icon {
+					width: 35px;
+					height: 35px;
+				}
+
+				.features-grid {
+					grid-template-columns: repeat(2, 1fr);
+					gap: 20px;
+					padding: 32px var(--gutter);
+				}
+
+				.feature-item p {
+					font-size: 12px;
+				}
+
+				.coverage-section {
+					margin-bottom: 80px;
+				}
+
+				.categories-section {
+					margin-bottom: 60px;
+				}
+
+				.categories-section .section-title {
+					max-width: none;
+					margin: 0 0 12px;
+				}
+
+				.action-cards {
+					grid-template-columns: 1fr 1fr;
+					grid-template-rows: 1fr 1fr;
+					min-height: 480px;
+					margin-top: 60px;
+					padding-inline: 0;
+				}
+
+				.action-card-content {
+					padding: 30px;
+				}
+
+				.action-card h3 {
+					font-size: 60px;
+				}
+
+				.action-card--claims {
+					grid-row: 1 / 3;
+					min-height: 100%;
+				}
+
+				.action-card--claims,
+				.action-card--contact,
+				.action-card--register {
+					min-height: 0;
+				}
+
+				.action-card--contact,
+				.action-card--register {
+					min-height: 220px;
+					aspect-ratio: 16 / 12;
+				}
+
+				.categories-grid {
+					grid-template-columns: repeat(4, 1fr);
+					gap: 100px 20px;
+					margin-top: 70px;
+				}
+
+				.category-item p {
+					max-width: 360px;
+					font-size: 24px;
+				}
+
+				.category-icon {
+					max-width: 160px;
+				}
+
+				.footer-logos {
+					flex-direction: row;
+					gap: 44px;
+				}
+
+				.footer-logo {
+					max-height: 68px;
+				}
+
+				.footer-logo-cps {
+					max-height: 48px;
+				}
+
+				.site-footer {
+					padding: 65px 0 32px;
+				}
+
+				.footer-sep {
+					display: inline;
+					margin: 0 45px;
+					opacity: 0.5;
+				}
+
+				.footer-contact p {
+					font-size: 20px;
+				}
+
+				.footer-contact-inner {
+					text-align: center;
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					gap: 70px;
+				}
+
+				.footer-contact-inner p {
+					font-size: 20px;
+				}
+
+				.footer-contact-inner p:not(:first-child) {
+					margin-top: 0;
+				}
+			}
+
+			/* ==========================================================================
+   Desktop (992px+)
+   ========================================================================== */
+
+			@media (min-width: 992px) {
+				.hero-content {
+					max-width: 900px;
+				}
+			}
+
+			/* ==========================================================================
+   Header & features desktop (1200px+)
+   ========================================================================== */
+
+			@media (min-width: 1200px) {
+				.header-inner {
+					min-height: var(--header-height);
+					gap: 24px;
+					padding: 40px 40px 30px;
+				}
+
+				.header-logos {
+					gap: 28px;
+				}
+
+				.logo-heat {
+					height: 48px;
+				}
+
+				.logo-cps {
+					height: 28px;
+				}
+
+				.nav-toggle {
+					display: none;
+				}
+
+				.nav-mobile {
+					display: none !important;
+				}
+
+				.nav-desktop,
+				.nav-desktop_2 {
+					display: flex;
+				}
+
+				.nav-primary,
+				.nav-secondary {
+					gap: 45px;
+				}
+
+				.nav-primary a,
+				.nav-secondary a {
+					font-size: 16px;
+					line-height: 1.5;
+					letter-spacing: 0;
+				}
+
+				.features-grid {
+					grid-template-columns: repeat(4, 1fr);
+					gap: 18px;
+					padding: 0 var(--gutter);
+				}
+
+				.feature-item p {
+					font-size: 16px;
+					line-height: 1.5;
+					letter-spacing: 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="header-container header-inner">
+				<a href="#" class="header-logos" aria-label="Home">
+					<img
+						src="images/header_logo.png"
+						alt="Heat &amp; Cool"
+						class="logo-heat"
+					/>
+					<img src="images/cps_logo.png" alt="CPS" class="logo-cps" />
+				</a>
+
+				<nav class="nav-desktop" aria-label="Main navigation">
+					<ul class="nav-primary">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Register Your Warranty</a></li>
+						<li><a href="#">File a Claim</a></li>
+						<li><a href="#">Purchase Comprehensive Coverage</a></li>
+					</ul>
+				</nav>
+
+				<nav class="nav-desktop_2">
+					<ul class="nav-secondary">
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</nav>
+
+				<button
+					type="button"
+					class="nav-toggle"
+					aria-expanded="false"
+					aria-controls="mobile-nav"
+					aria-label="Open menu"
+				>
+					<span class="nav-toggle-bar"></span>
+					<span class="nav-toggle-bar"></span>
+					<span class="nav-toggle-bar"></span>
+				</button>
+			</div>
+
+			<nav
+				id="mobile-nav"
+				class="nav-mobile"
+				aria-label="Mobile navigation"
+				hidden
+			>
+				<div class="header-container">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Register Your Warranty</a></li>
+						<li><a href="#">File a Claim</a></li>
+						<li><a href="#">Purchase Comprehensive Coverage</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div
+					class="hero-bg"
+					role="img"
+					aria-label="House with outdoor air conditioning unit"
+				></div>
+				<div class="hero-overlay"></div>
+				<div class="container hero-content">
+					<p class="hero-badge">Heat &amp; Cool + CPS - Extended Warranty</p>
+					<h1 class="hero-title">
+						Heat &amp; Cool partnered with CPS to provide you with extended
+						warranty coverage!
+					</h1>
+					<ul class="hero-features">
+						<li>
+							<i class="icon">
+								<img
+								src="images/banner_calendar.svg"
+								alt=""
+								class="hero-icon"
+							/>
+							</i>
+							
+							Full Coverage from Day One
+						</li>
+						<li>
+							<i class="icon">
+								<img
+								src="images/banner_lightning.svg"
+								alt=""
+								class="hero-icon"
+							/>
+							</i>
+							Surge Protection Coverage
+						</li>
+						<li>
+							<i class="icon">
+								<img
+								src="images/banner_wrench.svg"
+								alt=""
+								class="hero-icon"
+							/>
+							</i>
+							100% Parts & Labor
+						</li>
+						<li>
+							<i class="icon">
+								<img
+								src="images/banner_settings.svg"
+								alt=""
+								class="hero-icon"
+							/>
+							</i>
+							Manufacturer Defects
+						</li>
+						<li>
+							<i class="icon">
+								<img
+								src="images/banner_house.svg"
+								alt=""
+								class="hero-icon"
+							/>
+							</i>
+							On-Site Service Included
+						</li>
+						<li>
+							<i class="icon">
+								<img
+								src="images/banner_wrench.svg"
+								alt=""
+								class="hero-icon"
+							/>
+							</i>
+							No-Lemon Replacement
+						</li>
+					</ul>
+					<a href="#" class="btn btn-primary">Buy Coverage</a>
+				</div>
+			</section>
+
+			<section class="features-section">
+				<p class="section-kicker features-kicker">Choose CPS!</p>
+				<div class="features-bar">
+					<div class="container features-grid">
+						<div class="feature-item">
+							<img
+								src="images/lightning.svg"
+								alt=""
+								class="feature-icon"
+							/>
+							<p>Fast &amp; Easy Claims Process</p>
+						</div>
+						<div class="feature-item">
+							<img src="images/wrench.svg" alt="" class="feature-icon" />
+							<p>On-Site Service Included</p>
+						</div>
+						<div class="feature-item">
+							<img src="images/planet.svg" alt="" class="feature-icon" />
+							<p>All Brands Covered</p>
+						</div>
+						<div class="feature-item">
+							<img src="images/cup.svg" alt="" class="feature-icon" />
+							<p>Up to 10 Years of Coverage</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="coverage-section">
+				<div class="section-divider">
+					<span class="divider-line"></span>
+					<span class="divider-label">SHOP</span>
+					<!-- <img src="images/cps_logo.png" alt="" class="divider-logo" /> -->
+					<span class="divider-line"></span>
+				</div>
+				<div class="container section-intro">
+					<p class="section-kicker">Coverage Includes</p>
+					<h2 class="section-title">What Products Are Covered?</h2>
+					<p class="section-desc">
+						Comprehensive protection for your home comfort systems.
+					</p>
+				</div>
+
+				<div class="action-container action-cards">
+					<article class="action-card action-card--claims">
+						<div class="action-card-bg"></div>
+						<div class="action-card-overlay"></div>
+						<div class="action-card-content">
+							<h3>Warranty Claims</h3>
+							<a href="#" class="btn_2 btn-primary">File a Claim</a>
+						</div>
+					</article>
+					<article class="action-card action-card--contact">
+						<div class="action-card-bg"></div>
+						<div class="action-card-overlay"></div>
+						<div class="action-card-content">
+							<h3>Contact Support</h3>
+							<a href="#" class="btn_2 btn-primary">Contact Us</a>
+						</div>
+					</article>
+					<article class="action-card action-card--register">
+						<div class="action-card-bg"></div>
+						<div class="action-card-overlay"></div>
+						<div class="action-card-content">
+							<h3>Register Your Product</h3>
+							<a href="#" class="btn_2 btn-primary">Register</a>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section class="categories-section">
+				<div class="section-divider">
+					<span class="divider-line"></span>
+					<span class="divider-label">SHOP</span>
+					<!-- <img src="images/cps_logo.png" alt="" class="divider-logo" /> -->
+					<span class="divider-line"></span>
+				</div>
+				<div class="container section-intro">
+					<p class="section-kicker">What Products Are Covered?</p>
+					<h2 class="section-title">Every Major Category We Sell.</h2>
+					<p class="section-desc">
+						If Heat &amp; Cool sells it, CPS protects it.
+					</p>
+				</div>
+
+				<div class="categories-container categories-grid">
+					<a class="category-item">
+						<svg
+							class="category-icon"
+							width="160"
+							height="160"
+							viewBox="0 0 160 160"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M80.4005 9.5L142.8 45.5V114.3L80.4005 150.3L18.0005 114.3V45.5L80.4005 9.5Z"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M80.4005 19.1001L134.8 50.3001V109.5L80.4005 140.7L26.0005 109.5V50.3001L80.4005 19.1001Z"
+								stroke="currentColor"
+								stroke-width="0.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M80.2915 50.5V108.1"
+								stroke="currentColor"
+								stroke-width="2.21538"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M54.814 64.8999L105.768 93.6999"
+								stroke="currentColor"
+								stroke-width="2.21538"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M54.814 93.6999L105.768 64.8999"
+								stroke="currentColor"
+								stroke-width="2.21538"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M73.6455 57.1462L80.2917 50.5L86.9378 57.1462"
+								stroke="currentColor"
+								stroke-width="2.21538"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M73.6455 101.454L80.2917 108.1L86.9378 101.454"
+								stroke="currentColor"
+								stroke-width="2.21538"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M54.9996 69.6503L53.517 63.5622L59.6052 62.0797"
+								stroke="currentColor"
+								stroke-width="2.21538"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M104.526 71.0028L105.809 64.8696L99.676 63.5864"
+								stroke="currentColor"
+								stroke-width="2.21538"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M54.1338 89.0037V95.2697H60.3998"
+								stroke="currentColor"
+								stroke-width="2.21538"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M105.582 88.854L107.132 94.9254L101.061 96.4752"
+								stroke="currentColor"
+								stroke-width="2.21538"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M66.9983 71.5464L93.5829 87.0541"
+								stroke="currentColor"
+								stroke-width="2.21538"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M66.9983 87.0541L93.5829 71.5464"
+								stroke="currentColor"
+								stroke-width="2.21538"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						<p>Central Units</p>
+					</a>
+					<a class="category-item">
+						<svg
+							class="category-icon"
+							width="160"
+							height="160"
+							viewBox="0 0 160 160"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M32 32V88C32 109.333 48 128 80 144C112 128 128 109.333 128 88V32H32Z"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M38.3999 38.3999V86.3999C38.3999 105.6 52.2666 122.133 79.9999 136C107.733 122.133 121.6 105.6 121.6 86.3999V38.3999H38.3999Z"
+								stroke="currentColor"
+								stroke-width="0.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M79.5 48.5C73.3571 60.6154 58 70.3077 58 84.8462C58 100.596 70.2857 111.5 79.5 111.5C88.7143 111.5 101 100.596 101 84.8462C101 70.3077 85.6429 60.6154 79.5 48.5Z"
+								stroke="currentColor"
+								stroke-width="2.41923"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M80 69.5C75.2857 75.5714 69 80.4286 69 88.9286C69 97.4286 75.2857 103.5 80 103.5C84.7143 103.5 91 97.4286 91 88.9286C91 80.4286 84.7143 75.5714 80 69.5Z"
+								stroke="currentColor"
+								stroke-width="1.81442"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						<p>Gas Furnaces</p>
+					</a>
+					<a class="category-item">
+						<svg
+							class="category-icon"
+							width="160"
+							height="160"
+							viewBox="0 0 160 160"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M48 16H112L144 48V112L112 144H48L16 112V48L48 16Z"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M51.2 24H108.8L136 51.2V108.8L108.8 136H51.2L24 108.8V51.2L51.2 24Z"
+								stroke="currentColor"
+								stroke-width="0.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M113.095 63.1079H46.6892C44.6517 63.1079 43 64.7596 43 66.7971V96.3106C43 98.3481 44.6517 99.9998 46.6892 99.9998H113.095C115.132 99.9998 116.784 98.3481 116.784 96.3106V66.7971C116.784 64.7596 115.132 63.1079 113.095 63.1079Z"
+								stroke="currentColor"
+								stroke-width="2.45946"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M52.8384 72.9458H106.946"
+								stroke="currentColor"
+								stroke-width="2.45946"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M52.8384 81.5542H106.946"
+								stroke="currentColor"
+								stroke-width="2.45946"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M52.8384 90.1621H106.946"
+								stroke="currentColor"
+								stroke-width="2.45946"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M61.4458 63.1081V54.5"
+								stroke="currentColor"
+								stroke-width="2.45946"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M98.3374 63.1081V54.5"
+								stroke="currentColor"
+								stroke-width="2.45946"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						<p>PTAC Units</p>
+					</a>
+					<a class="category-item">
+						<svg
+							class="category-icon"
+							width="160"
+							height="160"
+							viewBox="0 0 160 160"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M79.9998 139.2C112.695 139.2 139.2 112.695 139.2 79.9998C139.2 47.3045 112.695 20.7998 79.9998 20.7998C47.3045 20.7998 20.7998 47.3045 20.7998 79.9998C20.7998 112.695 47.3045 139.2 79.9998 139.2Z"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M80 132.8C109.161 132.8 132.8 109.16 132.8 79.9997C132.8 50.8391 109.161 27.1997 80 27.1997C50.8393 27.1997 27.2 50.8391 27.2 79.9997C27.2 109.16 50.8393 132.8 80 132.8Z"
+								stroke="currentColor"
+								stroke-width="0.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M80.2653 46.5C66.7549 64.5138 59.9998 78.0241 59.9998 89.2828C59.9998 102.793 71.2584 111.8 80.2653 111.8C89.2722 111.8 100.531 102.793 100.531 89.2828C100.531 78.0241 93.7756 64.5138 80.2653 46.5Z"
+								stroke="currentColor"
+								stroke-width="2.25172"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M70.1328 87.0312C70.1328 93.7864 74.6363 98.2899 80.2656 98.2899"
+								stroke="currentColor"
+								stroke-width="1.68879"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						<p>Water Heaters</p>
+					</a>
+					<a class="category-item">
+						<svg
+							class="category-icon"
+							width="160"
+							height="160"
+							viewBox="0 0 160 160"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M80 148.8C117.997 148.8 148.8 117.997 148.8 80.0002C148.8 42.003 117.997 11.2002 80 11.2002C42.0028 11.2002 11.2 42.003 11.2 80.0002C11.2 117.997 42.0028 148.8 80 148.8Z"
+								stroke="currentColor"
+								stroke-width="0.96"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M80 18C81.1046 18 82 17.1046 82 16C82 14.8954 81.1046 14 80 14C78.8954 14 78 14.8954 78 16C78 17.1046 78.8954 18 80 18Z"
+								fill="#0B2545"
+							/>
+							<path
+								d="M124.8 37.2002C125.905 37.2002 126.8 36.3048 126.8 35.2002C126.8 34.0956 125.905 33.2002 124.8 33.2002C123.695 33.2002 122.8 34.0956 122.8 35.2002C122.8 36.3048 123.695 37.2002 124.8 37.2002Z"
+								fill="#0B2545"
+							/>
+							<path
+								d="M144 82C145.105 82 146 81.1046 146 80C146 78.8954 145.105 78 144 78C142.895 78 142 78.8954 142 80C142 81.1046 142.895 82 144 82Z"
+								fill="#0B2545"
+							/>
+							<path
+								d="M124.8 126.8C125.905 126.8 126.8 125.904 126.8 124.8C126.8 123.695 125.905 122.8 124.8 122.8C123.695 122.8 122.8 123.695 122.8 124.8C122.8 125.904 123.695 126.8 124.8 126.8Z"
+								fill="#0B2545"
+							/>
+							<path
+								d="M80 146C81.1046 146 82 145.105 82 144C82 142.895 81.1046 142 80 142C78.8954 142 78 142.895 78 144C78 145.105 78.8954 146 80 146Z"
+								fill="#0B2545"
+							/>
+							<path
+								d="M35.2 126.8C36.3045 126.8 37.2 125.904 37.2 124.8C37.2 123.695 36.3045 122.8 35.2 122.8C34.0954 122.8 33.2 123.695 33.2 124.8C33.2 125.904 34.0954 126.8 35.2 126.8Z"
+								fill="#0B2545"
+							/>
+							<path
+								d="M16 82C17.1046 82 18 81.1046 18 80C18 78.8954 17.1046 78 16 78C14.8954 78 14 78.8954 14 80C14 81.1046 14.8954 82 16 82Z"
+								fill="#0B2545"
+							/>
+							<path
+								d="M35.2 37.2002C36.3045 37.2002 37.2 36.3048 37.2 35.2002C37.2 34.0956 36.3045 33.2002 35.2 33.2002C34.0954 33.2002 33.2 34.0956 33.2 35.2002C33.2 36.3048 34.0954 37.2002 35.2 37.2002Z"
+								fill="#0B2545"
+							/>
+							<path
+								d="M79.9999 142.4C114.462 142.4 142.4 114.463 142.4 80.0001C142.4 45.5375 114.462 17.6001 79.9999 17.6001C45.5373 17.6001 17.5999 45.5375 17.5999 80.0001C17.5999 114.463 45.5373 142.4 79.9999 142.4Z"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M80 136C110.928 136 136 110.928 136 80C136 49.0721 110.928 24 80 24C49.0721 24 24 49.0721 24 80C24 110.928 49.0721 136 80 136Z"
+								stroke="currentColor"
+								stroke-width="0.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M113.727 60H45.848C43.1703 60 40.9995 62.1707 40.9995 64.8485V79.3939C40.9995 82.0717 43.1703 84.2424 45.848 84.2424H113.727C116.405 84.2424 118.575 82.0717 118.575 79.3939V64.8485C118.575 62.1707 116.405 60 113.727 60Z"
+								stroke="currentColor"
+								stroke-width="2.42424"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M53.1201 69.6973H106.453"
+								stroke="currentColor"
+								stroke-width="2.42424"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M53.1201 76.9697H106.453"
+								stroke="currentColor"
+								stroke-width="2.42424"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M55.5447 93.9395C59.5851 98.7879 63.6255 98.7879 67.6659 93.9395"
+								stroke="currentColor"
+								stroke-width="2.42424"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M73.7256 96.3638C77.766 101.212 81.8064 101.212 85.8468 96.3638"
+								stroke="currentColor"
+								stroke-width="2.42424"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M91.9075 93.9395C95.9479 98.7879 99.9883 98.7879 104.029 93.9395"
+								stroke="currentColor"
+								stroke-width="2.42424"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						<p>Ductless Single Zone</p>
+					</a>
+					<a class="category-item">
+						<svg
+							class="category-icon"
+							width="160"
+							height="160"
+							viewBox="0 0 160 160"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M80 148.8C117.997 148.8 148.8 117.997 148.8 80.0002C148.8 42.003 117.997 11.2002 80 11.2002C42.0028 11.2002 11.2 42.003 11.2 80.0002C11.2 117.997 42.0028 148.8 80 148.8Z"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M79.9999 142.4C114.462 142.4 142.4 114.463 142.4 80.0001C142.4 45.5375 114.462 17.6001 79.9999 17.6001C45.5373 17.6001 17.5999 45.5375 17.5999 80.0001C17.5999 114.463 45.5373 142.4 79.9999 142.4Z"
+								stroke="currentColor"
+								stroke-width="0.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M79.9998 17.6001V24.0001"
+								stroke="currentColor"
+								stroke-width="1.2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M79.9998 136V142.4"
+								stroke="currentColor"
+								stroke-width="1.2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M17.5999 80H23.9999"
+								stroke="currentColor"
+								stroke-width="1.2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M136 80H142.4"
+								stroke="currentColor"
+								stroke-width="1.2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M65.2941 60H38.9294C37.3115 60 36 61.3115 36 62.9294V77.5765C36 79.1943 37.3115 80.5059 38.9294 80.5059H65.2941C66.912 80.5059 68.2235 79.1943 68.2235 77.5765V62.9294C68.2235 61.3115 66.912 60 65.2941 60Z"
+								stroke="currentColor"
+								stroke-width="2.63647"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M41.8591 67.3237H62.365"
+								stroke="currentColor"
+								stroke-width="2.63647"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M120.954 60H94.5891C92.9712 60 91.6597 61.3115 91.6597 62.9294V77.5765C91.6597 79.1943 92.9712 80.5059 94.5891 80.5059H120.954C122.572 80.5059 123.883 79.1943 123.883 77.5765V62.9294C123.883 61.3115 122.572 60 120.954 60Z"
+								stroke="currentColor"
+								stroke-width="2.63647"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M97.5168 67.3237H118.023"
+								stroke="currentColor"
+								stroke-width="2.63647"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M93.1239 89.2939H66.7592C65.1414 89.2939 63.8298 90.6055 63.8298 92.2234V106.87C63.8298 108.488 65.1414 109.8 66.7592 109.8H93.1239C94.7418 109.8 96.0534 108.488 96.0534 106.87V92.2234C96.0534 90.6055 94.7418 89.2939 93.1239 89.2939Z"
+								stroke="currentColor"
+								stroke-width="2.63647"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M69.689 96.6177H90.1948"
+								stroke="currentColor"
+								stroke-width="2.63647"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M90.9998 70.3892L68.4998 70.3892"
+								stroke="currentColor"
+								stroke-width="2.63647"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-dasharray="2.93 2.93"
+							/>
+							<path
+								d="M52.1113 80.5059L69.6878 89.2941"
+								stroke="currentColor"
+								stroke-width="2.63647"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-dasharray="2.93 2.93"
+							/>
+							<path
+								d="M107.77 80.5059L90.1934 89.2941"
+								stroke="currentColor"
+								stroke-width="2.63647"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-dasharray="2.93 2.93"
+							/>
+						</svg>
+						<p>Ductless Multi Zone</p>
+					</a>
+					<a class="category-item">
+						<svg
+							class="category-icon"
+							width="160"
+							height="160"
+							viewBox="0 0 160 160"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M80 148.8C117.997 148.8 148.8 117.997 148.8 80.0002C148.8 42.003 117.997 11.2002 80 11.2002C42.0028 11.2002 11.2 42.003 11.2 80.0002C11.2 117.997 42.0028 148.8 80 148.8Z"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M79.9999 142.4C114.462 142.4 142.4 114.463 142.4 80.0001C142.4 45.5375 114.462 17.6001 79.9999 17.6001C45.5373 17.6001 17.5999 45.5375 17.5999 80.0001C17.5999 114.463 45.5373 142.4 79.9999 142.4Z"
+								stroke="currentColor"
+								stroke-width="0.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M39.9998 67.2923H92.4305C96.7998 67.2923 101.169 64.0154 101.169 59.6462C101.169 55.2769 96.7998 52 92.4305 52C89.1536 52 85.8767 54.1846 84.7844 57.4615"
+								stroke="currentColor"
+								stroke-width="2.40658"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M39.9998 82.2923H110.761C115.131 82.2923 119.5 79.0154 119.5 74.6462C119.5 70.2769 115.131 67 110.761 67C107.484 67 104.207 69.1846 103.115 72.4615"
+								stroke="currentColor"
+								stroke-width="2.40658"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M40 93.5078H88.0615C92.4308 93.5078 96.8 96.7847 96.8 101.154C96.8 105.523 92.4308 108.8 88.0615 108.8C84.7846 108.8 81.5077 106.616 80.4154 103.339"
+								stroke="currentColor"
+								stroke-width="2.40658"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						<p>Air Purifiers</p>
+					</a>
+					<a class="category-item">
+						<svg
+							class="category-icon"
+							width="160"
+							height="160"
+							viewBox="0 0 160 160"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M80.0001 9.6001L142.4 45.6001V114.4L80.0001 150.4L17.6001 114.4V45.6001L80.0001 9.6001Z"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M80.0001 19.2002L134.4 50.4002V109.6L80.0001 140.8L25.6001 109.6V50.4002L80.0001 19.2002Z"
+								stroke="currentColor"
+								stroke-width="0.8"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M79.5002 49L85.9213 54.5455L95.5529 53.1591L97.1581 61.4773L106.79 64.25L103.579 72.5682L110 79.5L103.579 86.4318L106.79 94.75L97.1581 97.5227L95.5529 105.841L85.9213 104.455L79.5002 110L73.0792 104.455L63.4476 105.841L61.8423 97.5227L52.2108 94.75L55.4213 86.4318L49.0002 79.5L55.4213 72.5682L52.2108 64.25L61.8423 61.4773L63.4476 53.1591L73.0792 54.5455L79.5002 49Z"
+								stroke="currentColor"
+								stroke-width="2.78857"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+							<path
+								d="M79.5 89.086C84.7941 89.086 89.0857 84.7943 89.0857 79.5003C89.0857 74.2062 84.7941 69.9146 79.5 69.9146C74.206 69.9146 69.9143 74.2062 69.9143 79.5003C69.9143 84.7943 74.206 89.086 79.5 89.086Z"
+								stroke="currentColor"
+								stroke-width="2.78857"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						<p>Parts, Accessories &amp; More</p>
+					</a>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="header-container footer-inner">
+				<div class="footer-logos">
+					<img
+						src="images/footer_logo.png"
+						alt="Heat &amp; Cool and CPS"
+						class="footer-logo"
+					/>
+					<img
+						src="images/cps_logo.png"
+						alt="CPS"
+						class="footer-logo-cps"
+					/>
+				</div>
+				<div class="footer-container footer-contact">
+					<div class="footer-contact-inner">
+						<p>
+							Toll free:
+							<a href="#">(800) 905-0443</a>
+						</p>
+
+						<p>
+							International:
+							<a href="#">+1 (347) 535-3518</a>
+						</p>
+
+						<p>
+							Email us:
+							<a href="#">cs@cpscentral.com</a>
+						</p>
+
+						<p><a href="#">CPS Privacy Policy</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			(function () {
+				const toggle = document.querySelector(".nav-toggle");
+				const mobileNav = document.getElementById("mobile-nav");
+
+				if (!toggle || !mobileNav) return;
+
+				function setMenuOpen(isOpen) {
+					toggle.setAttribute("aria-expanded", String(isOpen));
+					toggle.setAttribute(
+						"aria-label",
+						isOpen ? "Close menu" : "Open menu",
+					);
+					mobileNav.hidden = false;
+					mobileNav.classList.toggle("is-open", isOpen);
+				}
+
+				toggle.addEventListener("click", function () {
+					const isOpen = toggle.getAttribute("aria-expanded") === "true";
+					setMenuOpen(!isOpen);
+				});
+
+				const HEADER_BREAKPOINT = 1200;
+
+				window.addEventListener("resize", function () {
+					if (window.innerWidth >= HEADER_BREAKPOINT) {
+						setMenuOpen(false);
+					}
+				});
+
+				document.addEventListener("keydown", function (event) {
+					if (event.key === "Escape") {
+						setMenuOpen(false);
+					}
+				});
+			})();
+		</script>
+	</body>
+</html>
