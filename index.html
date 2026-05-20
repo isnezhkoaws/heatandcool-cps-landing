@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="CPS extended warranty coverage for Heat &amp; Cool products, including claims, registration, and support."
+		/>
 		<title>Heat &amp; Cool | CPS Extended Warranty</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -301,7 +305,7 @@
 			}
 
 			@media (min-width: 768px) {
-				.hidden-desktop	 {
+				.hidden-desktop {
 					display: none !important;
 				}
 			}
@@ -1288,7 +1292,7 @@
 	<body>
 		<header class="site-header">
 			<div class="header-container header-inner">
-				<div class="header-logos" aria-label="Home">
+				<div class="header-logos">
 					<a href="#"><img
 						src="images/header_logo.png"
 						alt="Heat &amp; Cool"
@@ -1299,7 +1303,7 @@
 
 				<nav class="nav-desktop" aria-label="Main navigation">
 					<ul class="nav-primary">
-						<li><a href="#">Home</a></li>
+						<li><a href="#" aria-current="page">Home</a></li>
 						<li><a href="#">Register Your Warranty</a></li>
 						<li><a href="#">File a Claim</a></li>
 						<li><a href="#">Purchase Comprehensive Coverage</a></li>
@@ -1334,7 +1338,7 @@
 			>
 				<div class="header-container">
 					<ul>
-						<li><a href="#">Home</a></li>
+						<li><a href="#" aria-current="page">Home</a></li>
 						<li><a href="#">Register Your Warranty</a></li>
 						<li><a href="#">File a Claim</a></li>
 						<li><a href="#">Purchase Comprehensive Coverage</a></li>
@@ -1361,64 +1365,64 @@
 					</h1>
 					<ul class="hero-features">
 						<li>
-							<i class="icon">
+							<span class="icon" aria-hidden="true">
 								<img
 								src="images/banner_calendar.svg"
 								alt=""
 								class="hero-icon"
 							/>
-							</i>
+							</span>
 							
 							Full Coverage from Day One
 						</li>
 						<li>
-							<i class="icon">
+							<span class="icon" aria-hidden="true">
 								<img
 								src="images/banner_lightning.svg"
 								alt=""
 								class="hero-icon"
 							/>
-							</i>
+							</span>
 							Surge Protection Coverage
 						</li>
 						<li>
-							<i class="icon">
+							<span class="icon" aria-hidden="true">
 								<img
 								src="images/banner_wrench.svg"
 								alt=""
 								class="hero-icon"
 							/>
-							</i>
+							</span>
 							100% Parts & Labor
 						</li>
 						<li>
-							<i class="icon">
+							<span class="icon" aria-hidden="true">
 								<img
 								src="images/banner_settings.svg"
 								alt=""
 								class="hero-icon"
 							/>
-							</i>
+							</span>
 							Manufacturer Defects
 						</li>
 						<li>
-							<i class="icon">
+							<span class="icon" aria-hidden="true">
 								<img
 								src="images/banner_house.svg"
 								alt=""
 								class="hero-icon"
 							/>
-							</i>
+							</span>
 							On-Site Service Included
 						</li>
 						<li>
-							<i class="icon">
+							<span class="icon" aria-hidden="true">
 								<img
 								src="images/banner_wrench.svg"
 								alt=""
 								class="hero-icon"
 							/>
-							</i>
+							</span>
 							No-Lemon Replacement
 						</li>
 					</ul>
@@ -1454,7 +1458,7 @@
 				</div>
 			</section>
 
-			<section class="coverage-section">
+			<section class="coverage-section" aria-labelledby="coverage-title">
 				<div class="section-divider">
 					<span class="divider-line"></span>
 					<span class="divider-label">SHOP</span>
@@ -1463,7 +1467,7 @@
 				</div>
 				<div class="container section-intro">
 					<p class="section-kicker">Coverage Includes</p>
-					<h2 class="section-title">What Products Are Covered?</h2>
+					<h2 id="coverage-title" class="section-title">What Products Are Covered?</h2>
 					<p class="section-desc">
 						Comprehensive protection for your home comfort systems.
 					</p>
@@ -1497,7 +1501,7 @@
 				</div>
 			</section>
 
-			<section class="categories-section">
+			<section class="categories-section" aria-labelledby="categories-title">
 				<div class="section-divider">
 					<span class="divider-line"></span>
 					<span class="divider-label">SHOP</span>
@@ -1506,7 +1510,7 @@
 				</div>
 				<div class="container section-intro">
 					<p class="section-kicker">What Products Are Covered?</p>
-					<h2 class="section-title">Every Major Category We Sell.</h2>
+					<h2 id="categories-title" class="section-title">Every Major Category We Sell.</h2>
 					<p class="section-desc">
 						If Heat &amp; Cool sells it, CPS protects it.
 					</p>
@@ -2125,6 +2129,15 @@
 				const mobileNav = document.getElementById("mobile-nav");
 
 				if (!toggle || !mobileNav) return;
+				const MENU_CLOSE_DURATION_MS = 350;
+				let closeMenuTimer = null;
+
+				function clearCloseTimer() {
+					if (closeMenuTimer !== null) {
+						window.clearTimeout(closeMenuTimer);
+						closeMenuTimer = null;
+					}
+				}
 
 				function setMenuOpen(isOpen) {
 					toggle.setAttribute("aria-expanded", String(isOpen));
@@ -2132,8 +2145,20 @@
 						"aria-label",
 						isOpen ? "Close menu" : "Open menu",
 					);
-					mobileNav.hidden = false;
-					mobileNav.classList.toggle("is-open", isOpen);
+					if (isOpen) {
+						clearCloseTimer();
+						mobileNav.hidden = false;
+						requestAnimationFrame(function () {
+							mobileNav.classList.add("is-open");
+						});
+						return;
+					}
+
+					mobileNav.classList.remove("is-open");
+					clearCloseTimer();
+					closeMenuTimer = window.setTimeout(function () {
+						mobileNav.hidden = true;
+					}, MENU_CLOSE_DURATION_MS);
 				}
 
 				toggle.addEventListener("click", function () {
