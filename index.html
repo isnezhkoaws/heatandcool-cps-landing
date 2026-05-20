@@ -222,9 +222,10 @@
 				--color-black: #000;
 				--color-border: #d9e2ec;
 				--color-border-light: #f0f4f8;
+				--color-azure: #5B6577;
 				--container-max: 1200px;
 				--header-container: 1920px;
-				--action-container: 1300px;
+				--action-container: 1340px;
 				--categories-container: 1200px;
 				--footer-container: 1350px;
 				--header-height: 72px;
@@ -281,6 +282,7 @@
 
 			.action-container {
 				max-width: var(--action-container);
+				padding: 0 30px;
 			}
 
 			.categories-container {
@@ -290,6 +292,18 @@
 			.footer-container {
 				max-width: var(--footer-container);
 				width: 100%;
+			}
+
+			@media (max-width: 767px) {
+				.hidden-mobile {
+					display: none !important;
+				}
+			}
+
+			@media (min-width: 768px) {
+				.hidden-desktop	 {
+					display: none !important;
+				}
 			}
 			/* ==========================================================================
    Buttons
@@ -357,10 +371,10 @@
 			.section-desc {
 				font-family: var(--font-inter);
 				margin: 0 auto 29px;
-				max-width: 520px;
+				max-width: 280px;
 				font-size: 17px;
 				text-align: center;
-				color: var(--color-text);
+				color: var(--color-azure);
 			}
 
 			.section-intro {
@@ -520,6 +534,10 @@
 			}
 
 			.nav-mobile {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
 				overflow: hidden;
 				max-height: 0;
 				opacity: 0;
@@ -539,22 +557,18 @@
 				padding: 12px 0 20px;
 			}
 
-			.nav-mobile li + li {
-				border-top: 1px solid var(--color-border-light);
-			}
-
 			.nav-mobile a {
 				display: block;
 				padding: 12px 0;
-				font-size: 13px;
+				font-size: 18px;
 				font-weight: 600;
 				text-transform: uppercase;
 				color: var(--color-orange);
+				font-family: var(--font-inter);
 			}
 
 			.nav-mobile li:nth-child(n + 5) a {
 				color: var(--color-heading);
-				font-size: 12px;
 			}
 
 			/* ==========================================================================
@@ -662,6 +676,21 @@
 				flex-shrink: 0;
 			}
 
+			@media (max-width: 767px) {
+				.hero-features li:nth-child(even) {
+					order: 1;
+				}
+				.btn_2 {
+					min-width: 110px;
+					font-size: 11px;
+					min-height: 38px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					max-width: max-content;
+				}
+			}
+
 			/* ==========================================================================
    Features bar
    ========================================================================== */
@@ -673,10 +702,6 @@
 
 			.features-kicker {
 				padding-top: 8px;
-			}
-
-			.features-bar {
-				margin-top: 16px;
 			}
 
 			.features-grid {
@@ -726,6 +751,7 @@
 			.categories-section .section-title {
 				max-width: 270px;
 				margin: 15px auto;
+				letter-spacing: 1.5px;
 			}
 
 			.action-cards {
@@ -733,7 +759,6 @@
 				grid-template-columns: 1fr;
 				gap: 16px;
 				margin-top: 30px;
-				padding-inline: 30px;
 			}
 
 			.action-card {
@@ -835,8 +860,7 @@
 
 			.category-item p {
 				margin: 0;
-				max-width: 140px;
-				font-size: 11px;
+				font-size: 13px;
 				font-weight: 400;
 				letter-spacing: 0.01em;
 				text-transform: uppercase;
@@ -849,7 +873,7 @@
    ========================================================================== */
 
 			.site-footer {
-				padding: 40px 0 24px;
+				padding: 40px 0 50px;
 				background: var(--color-navy);
 				color: var(--color-white);
 			}
@@ -885,12 +909,14 @@
 
 			.footer-contact a {
 				color: var(--color-white);
-				text-decoration: underline;
-				text-underline-offset: 2px;
+			}
+
+			.footer-contact a:not(.font-bold) {
+				font-weight: normal;
 			}
 
 			.footer-contact a:hover {
-				opacity: 0.85;
+				text-decoration: underline;
 			}
 
 			.footer-sep {
@@ -930,7 +956,7 @@
 
 				.section-title {
 					margin-bottom: 12px;
-					font-size: clamp(22px, 4vw, 32px);
+					font-size: clamp(22px, 4vw, 30px);
 				}
 
 				.section-desc {
@@ -977,7 +1003,7 @@
 				}
 
 				.coverage-section {
-					margin-bottom: 80px;
+					margin-bottom: 90px;
 				}
 
 				.categories-section {
@@ -987,6 +1013,7 @@
 				.categories-section .section-title {
 					max-width: none;
 					margin: 0 0 12px;
+					letter-spacing: 0;
 				}
 
 				.action-cards {
@@ -994,7 +1021,6 @@
 					grid-template-rows: 1fr 1fr;
 					min-height: 480px;
 					margin-top: 60px;
-					padding-inline: 0;
 				}
 
 				.action-card-content {
@@ -1003,6 +1029,12 @@
 
 				.action-card h3 {
 					font-size: 60px;
+					letter-spacing: 0;
+				}
+
+				.action-card--register h3 {
+					padding-right: 20px;
+					margin-bottom: 25px;
 				}
 
 				.action-card--claims {
@@ -1079,6 +1111,18 @@
 				.footer-contact-inner p:not(:first-child) {
 					margin-top: 0;
 				}
+
+				.footer-inner {
+					gap: 32px;
+				}
+
+				.features-bar {
+					margin-top: 16px;
+				}
+
+				.section-desc {
+					max-width: 520px;
+				}
 			}
 
 			/* ==========================================================================
@@ -1097,9 +1141,10 @@
 
 			@media (min-width: 1200px) {
 				.header-inner {
+					position: relative;
 					min-height: var(--header-height);
 					gap: 24px;
-					padding: 40px 40px 30px;
+					padding: 40px 30px 30px;
 				}
 
 				.header-logos {
@@ -1132,6 +1177,38 @@
 					gap: 45px;
 				}
 
+				.nav-secondary {
+					gap: 0;
+				}
+
+				.nav-secondary li {
+					padding: 0 15px;
+					position: relative;
+				}
+
+				.nav-secondary li:first-child {
+					padding-left: 0;
+				}
+
+				.nav-secondary li:last-child {
+					padding-right: 0;
+				}
+				.nav-secondary li:after {
+					position: absolute;
+					display: block;
+					content: '';
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 1px;
+					height: 28px;
+					background-color: #BABABA;
+				}
+
+				.nav-secondary li:last-child:after {
+					display: none;
+				}
+
 				.nav-primary a,
 				.nav-secondary a {
 					font-size: 16px;
@@ -1146,9 +1223,64 @@
 				}
 
 				.feature-item p {
-					font-size: 16px;
+					font-size: 18px;
 					line-height: 1.5;
 					letter-spacing: 0;
+				}
+				.features-grid {
+					display: flex;
+					gap: 60px;
+					max-width: max-content;
+					padding-top: 6px;
+					margin-bottom: 22px;
+				}
+			}
+
+			/* Tablet */
+			@media (min-width: 768px) and (max-width: 1199px) {
+				.action-card h3 {
+					font-size: 44px;
+				}
+				.categories-grid {
+					row-gap: 40px;
+				}
+				.category-item p {
+					font-size: 20px;
+				}
+				.footer-contact-inner {
+					flex-direction: column;
+					gap: 12px;
+				}
+				.features-grid {
+					max-width: max-content;
+					margin: 0 auto;
+					padding-top: 20px;
+				}
+				.hero-title {
+					font-size: 50px;
+				}
+				.features-grid {
+					padding-top: 0;
+					padding-bottom: 20px;
+				}
+			}
+
+			/* Small desktops */
+			@media (min-width: 1200px) and (max-width: 1439px) {
+				.header-inner {
+					display: grid;
+					grid-template-columns: auto 4fr 1fr;
+					padding: 30px 30px 20px;
+				}
+				
+				.header-logos {
+					gap: 16px;
+				}
+				.nav-primary {
+					gap: 20px;
+				}
+				.nav-primary a, .nav-secondary a {
+					font-size: 14px;
 				}
 			}
 		</style>
@@ -1156,14 +1288,14 @@
 	<body>
 		<header class="site-header">
 			<div class="header-container header-inner">
-				<a href="#" class="header-logos" aria-label="Home">
-					<img
+				<div class="header-logos" aria-label="Home">
+					<a href="#"><img
 						src="images/header_logo.png"
 						alt="Heat &amp; Cool"
 						class="logo-heat"
-					/>
-					<img src="images/cps_logo.png" alt="CPS" class="logo-cps" />
-				</a>
+					/></a>
+					<a href="#"><img src="images/cps_logo.png" alt="CPS" class="logo-cps" /></a>
+				</div>
 
 				<nav class="nav-desktop" aria-label="Main navigation">
 					<ul class="nav-primary">
@@ -1295,7 +1427,7 @@
 			</section>
 
 			<section class="features-section">
-				<p class="section-kicker features-kicker">Choose CPS!</p>
+				<p class="section-kicker features-kicker hidden-mobile">Choose CPS!</p>
 				<div class="features-bar">
 					<div class="container features-grid">
 						<div class="feature-item">
@@ -1358,7 +1490,7 @@
 						<div class="action-card-bg"></div>
 						<div class="action-card-overlay"></div>
 						<div class="action-card-content">
-							<h3>Register Your Product</h3>
+							<h3>Register Your <br>Product</h3>
 							<a href="#" class="btn_2 btn-primary">Register</a>
 						</div>
 					</article>
@@ -1968,20 +2100,20 @@
 					<div class="footer-contact-inner">
 						<p>
 							Toll free:
-							<a href="#">(800) 905-0443</a>
+							<a href="tel:8009050443">(800) 905-0443</a>
 						</p>
 
 						<p>
 							International:
-							<a href="#">+1 (347) 535-3518</a>
+							<a href="tel:+13475353518">+1 (347) 535-3518</a>
 						</p>
 
 						<p>
 							Email us:
-							<a href="#">cs@cpscentral.com</a>
+							<a href="mailto:cs@cpscentral.com">cs@cpscentral.com</a>
 						</p>
 
-						<p><a href="#">CPS Privacy Policy</a></p>
+						<p><a class="font-bold" href="#">CPS Privacy Policy</a></p>
 					</div>
 				</div>
 			</div>
