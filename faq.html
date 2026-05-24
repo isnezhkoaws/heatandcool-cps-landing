@@ -5,353 +5,44 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta
 			name="description"
-			content="Frequently asked questions about CPS extended warranty coverage for Heat & Cool products."
+			content="CPS extended warranty coverage for Heat &amp; Cool products, including claims, registration, and support."
 		/>
-		<title>FAQ | Heat &amp; Cool + CPS Extended Warranty</title>
+		<title>Heat &amp; Cool | CPS Extended Warranty</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
-		<style>
-			*,
-			*::before,
-			*::after {
-				box-sizing: border-box;
-			}
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="assets/css/style.css"
+			rel="stylesheet"
+		/>
 
-			:root {
-				--color-orange: #e44d26;
-				--color-teal: #1cb5b3;
-				--color-gray-100: #f5f6f8;
-				--color-gray-200: #e8eaee;
-				--color-gray-700: #414b5a;
-				--color-gray-900: #101828;
-				--header-height: 72px;
-				--header-container: 1920px;
-			}
-
-			body {
-				margin: 0;
-				font-family: "Inter", sans-serif;
-				color: var(--color-gray-900);
-				background: linear-gradient(180deg, #ffffff 0%, #f9fbfd 100%);
-			}
-
-			a {
-				color: inherit;
-				text-decoration: none;
-			}
-
-			img {
-				display: block;
-				max-width: 100%;
-				height: auto;
-			}
-
-			.header-container {
-				width: 100%;
-				max-width: var(--header-container);
-				margin: 0 auto;
-				padding-left: 40px;
-				padding-right: 40px;
-			}
-
-			.site-header {
-				position: sticky;
-				top: 0;
-				z-index: 20;
-				background: #fff;
-				border-bottom: 1px solid var(--color-gray-200);
-			}
-
-			.header-inner {
-				display: grid;
-				grid-template-columns: auto 1fr auto;
-				align-items: center;
-				gap: 28px;
-				min-height: var(--header-height);
-				padding-top: 14px;
-				padding-bottom: 14px;
-			}
-
-			.header-logos {
-				display: flex;
-				align-items: center;
-				gap: 16px;
-			}
-
-			.logo-heat {
-				width: 164px;
-			}
-
-			.logo-cps {
-				width: 78px;
-			}
-
-			.nav-desktop,
-			.nav-desktop_2 {
-				display: none;
-			}
-
-			.nav-primary,
-			.nav-secondary {
-				list-style: none;
-				display: flex;
-				align-items: center;
-				gap: 22px;
-				margin: 0;
-				padding: 0;
-			}
-
-			.nav-primary a,
-			.nav-secondary a {
-				font-size: 14px;
-				font-weight: 600;
-				color: var(--color-gray-700);
-			}
-
-			.nav-primary a[aria-current="page"],
-			.nav-secondary a[aria-current="page"] {
-				color: var(--color-orange);
-			}
-
-			.nav-toggle {
-				display: inline-flex;
-				flex-direction: column;
-				gap: 5px;
-				background: transparent;
-				border: 0;
-				padding: 8px;
-			}
-
-			.nav-toggle-bar {
-				display: block;
-				width: 24px;
-				height: 2px;
-				background: var(--color-gray-900);
-			}
-
-			.nav-mobile {
-				border-top: 1px solid var(--color-gray-200);
-				background: #fff;
-				opacity: 0;
-				transform: translateY(-8px);
-				transition: opacity 0.35s ease, transform 0.35s ease;
-				pointer-events: none;
-			}
-
-			.nav-mobile.is-open {
-				opacity: 1;
-				transform: translateY(0);
-				pointer-events: auto;
-			}
-
-			.nav-mobile ul {
-				list-style: none;
-				margin: 0;
-				padding: 16px 0 20px;
-				display: flex;
-				flex-direction: column;
-				gap: 10px;
-			}
-
-			.nav-mobile a {
-				display: inline-block;
-				font-weight: 600;
-				color: var(--color-gray-700);
-				padding: 8px 0;
-			}
-
-			.nav-mobile a[aria-current="page"] {
-				color: var(--color-orange);
-			}
-
-			main {
-				padding: 56px 0 72px;
-			}
-
-			.container {
-				width: min(980px, calc(100% - 48px));
-				margin: 0 auto;
-			}
-
-			.page-title {
-				font-family: "Oswald", sans-serif;
-				font-size: clamp(38px, 5vw, 62px);
-				line-height: 1.05;
-				margin: 0;
-			}
-
-			.page-subtitle {
-				margin: 16px 0 0;
-				font-size: 18px;
-				line-height: 1.6;
-				color: var(--color-gray-700);
-				max-width: 72ch;
-			}
-
-			.faq-list {
-				margin-top: 34px;
-				display: grid;
-				gap: 14px;
-			}
-
-			.faq-item {
-				background: #fff;
-				border: 1px solid var(--color-gray-200);
-				border-radius: 14px;
-				overflow: hidden;
-			}
-
-			.faq-item summary {
-				cursor: pointer;
-				font-weight: 700;
-				font-size: 18px;
-				padding: 18px 20px;
-				list-style: none;
-				position: relative;
-			}
-
-			.faq-item summary::-webkit-details-marker {
-				display: none;
-			}
-
-			.faq-item summary::after {
-				content: "+";
-				position: absolute;
-				right: 20px;
-				top: 50%;
-				transform: translateY(-50%);
-				font-size: 24px;
-				color: var(--color-teal);
-			}
-
-			.faq-item[open] summary::after {
-				content: "\2212";
-			}
-
-			.faq-answer {
-				padding: 0 20px 18px;
-				font-size: 16px;
-				line-height: 1.65;
-				color: var(--color-gray-700);
-			}
-
-			.help-box {
-				margin-top: 28px;
-				padding: 20px;
-				border-radius: 12px;
-				background: linear-gradient(135deg, #eef7ff 0%, #f4fffd 100%);
-				border: 1px solid #cfe0ef;
-			}
-
-			.help-box p {
-				margin: 0;
-				line-height: 1.6;
-			}
-
-			.help-box a {
-				color: #0f5ca8;
-				font-weight: 700;
-			}
-
-			.site-footer {
-				border-top: 1px solid var(--color-gray-200);
-				background: #fff;
-				padding: 26px 0;
-			}
-
-			.footer-inner {
-				display: grid;
-				gap: 20px;
-				align-items: center;
-			}
-
-			.footer-logos {
-				display: flex;
-				gap: 16px;
-				align-items: center;
-			}
-
-			.footer-logo {
-				width: 164px;
-			}
-
-			.footer-logo-cps {
-				width: 78px;
-			}
-
-			.footer-contact {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 14px 24px;
-				font-size: 14px;
-				color: var(--color-gray-700);
-			}
-
-			.footer-contact p {
-				margin: 0;
-			}
-
-			.footer-contact a {
-				font-weight: 600;
-			}
-
-			@media (min-width: 1200px) {
-				.nav-desktop,
-				.nav-desktop_2 {
-					display: block;
-				}
-
-				.nav-toggle,
-				.nav-mobile {
-					display: none;
-				}
-			}
-
-			@media (max-width: 1199px) {
-				.header-container {
-					padding-left: 20px;
-					padding-right: 20px;
-				}
-			}
-
-			@media (max-width: 767px) {
-				.page-subtitle {
-					font-size: 16px;
-				}
-
-				.faq-item summary {
-					font-size: 17px;
-					padding-right: 48px;
-				}
-
-				.faq-answer {
-					font-size: 15px;
-				}
-			}
-		</style>
 	</head>
 	<body>
 		<header class="site-header">
 			<div class="header-container header-inner">
 				<div class="header-logos">
-					<a href="index.html"
-						><img
-							src="images/header_logo.png"
-							alt="Heat &amp; Cool"
-							class="logo-heat"
+					<a href="index.html"><img
+						src="assets/images/header_logo.png"
+						alt="Heat &amp; Cool"
+						class="logo-heat"
 					/></a>
-					<a href="index.html"
-						><img src="images/cps_logo.png" alt="CPS" class="logo-cps"
-					/></a>
+					<a href="index.html"><img src="assets/images/cps_logo.png" alt="CPS" class="logo-cps" /></a>
 				</div>
 
 				<nav class="nav-desktop" aria-label="Main navigation">
 					<ul class="nav-primary">
-						<li><a href="index.html">Home</a></li>
+						<li><a href="index.html" aria-current="page">Home</a></li>
 						<li><a href="#">Register Your Warranty</a></li>
 						<li><a href="#">File a Claim</a></li>
 						<li><a href="#">Purchase Comprehensive Coverage</a></li>
@@ -360,7 +51,7 @@
 
 				<nav class="nav-desktop_2">
 					<ul class="nav-secondary">
-						<li><a href="faq.html" aria-current="page">FAQ</a></li>
+						<li><a href="faq.html">FAQ</a></li>
 						<li><a href="#">Contact Us</a></li>
 					</ul>
 				</nav>
@@ -386,11 +77,11 @@
 			>
 				<div class="header-container">
 					<ul>
-						<li><a href="index.html">Home</a></li>
+						<li><a href="index.html" aria-current="page">Home</a></li>
 						<li><a href="#">Register Your Warranty</a></li>
 						<li><a href="#">File a Claim</a></li>
 						<li><a href="#">Purchase Comprehensive Coverage</a></li>
-						<li><a href="faq.html" aria-current="page">FAQ</a></li>
+						<li><a href="faq.html">FAQ</a></li>
 						<li><a href="#">Contact Us</a></li>
 					</ul>
 				</div>
@@ -398,127 +89,42 @@
 		</header>
 
 		<main>
-			<div class="container">
-				<h1 class="page-title">Frequently Asked Questions</h1>
-				<p class="page-subtitle">
-					Find quick answers about coverage terms, registration, claims, and
-					how to contact support for your Heat &amp; Cool product protection
-					plan.
-				</p>
-
-				<section class="faq-list" aria-label="Frequently asked questions">
-					<details class="faq-item" open>
-						<summary>What does the CPS extended warranty cover?</summary>
-						<div class="faq-answer">
-							Most plans cover parts and labor for mechanical and electrical
-							failures after the manufacturer warranty period, based on your
-							specific contract terms.
-						</div>
-					</details>
-
-					<details class="faq-item">
-						<summary>When does my coverage start?</summary>
-						<div class="faq-answer">
-							Coverage timing depends on your plan. Some protection begins on
-							the purchase date, while extended portions continue after the
-							manufacturer warranty expires.
-						</div>
-					</details>
-
-					<details class="faq-item">
-						<summary>How do I register my product warranty?</summary>
-						<div class="faq-answer">
-							Use the registration option on the website and provide your
-							product details, proof of purchase, and contact information.
-							Keep the confirmation email for your records.
-						</div>
-					</details>
-
-					<details class="faq-item">
-						<summary>How do I file a claim?</summary>
-						<div class="faq-answer">
-							Go to the claim section, submit your plan and product details,
-							and describe the issue. A claims specialist will guide you
-							through the next steps.
-						</div>
-					</details>
-
-					<details class="faq-item">
-						<summary>Do I need to keep my receipt and plan documents?</summary>
-						<div class="faq-answer">
-							Yes. Keep your purchase receipt, warranty registration
-							confirmation, and service contract details to speed up claim
-							validation.
-						</div>
-					</details>
-
-					<details class="faq-item">
-						<summary>Are accessories and additional parts included?</summary>
-						<div class="faq-answer">
-							Many plans include accessory and component protection, but
-							coverage limits vary. Review your policy terms for exact
-							inclusions and exclusions.
-						</div>
-					</details>
-
-					<details class="faq-item">
-						<summary>Can I transfer my warranty plan to someone else?</summary>
-						<div class="faq-answer">
-							Some plans are transferable. Contact support with your plan
-							number and transfer request to confirm eligibility and required
-							documentation.
-						</div>
-					</details>
-
-					<details class="faq-item">
-						<summary>How do I contact support?</summary>
-						<div class="faq-answer">
-							Reach support by phone at <a href="tel:8009050443">(800) 905-0443</a>,
-							internationally at <a href="tel:+13475353518">+1 (347) 535-3518</a>,
-							or by email at
-							<a href="mailto:cs@cpscentral.com">cs@cpscentral.com</a>.
-						</div>
-					</details>
-				</section>
-
-				<div class="help-box" role="note" aria-label="Need more help">
-					<p>
-						Need a specific answer about your plan? Contact CPS support at
-						<a href="mailto:cs@cpscentral.com">cs@cpscentral.com</a> and include
-						your plan number for faster help.
-					</p>
-				</div>
-			</div>
+			
 		</main>
 
 		<footer class="site-footer">
 			<div class="header-container footer-inner">
 				<div class="footer-logos">
 					<img
-						src="images/footer_logo.png"
+						src="assets/images/footer_logo.png"
 						alt="Heat &amp; Cool and CPS"
 						class="footer-logo"
 					/>
 					<img
-						src="images/cps_logo.png"
+						src="assets/images/cps_logo.png"
 						alt="CPS"
 						class="footer-logo-cps"
 					/>
 				</div>
-				<div class="footer-contact">
-					<p>
-						Toll free:
-						<a href="tel:8009050443">(800) 905-0443</a>
-					</p>
-					<p>
-						International:
-						<a href="tel:+13475353518">+1 (347) 535-3518</a>
-					</p>
-					<p>
-						Email us:
-						<a href="mailto:cs@cpscentral.com">cs@cpscentral.com</a>
-					</p>
-					<p><a href="#">CPS Privacy Policy</a></p>
+				<div class="footer-container footer-contact">
+					<div class="footer-contact-inner">
+						<p>
+							Toll free:
+							<a href="tel:8009050443">(800) 905-0443</a>
+						</p>
+
+						<p>
+							International:
+							<a href="tel:+13475353518">+1 (347) 535-3518</a>
+						</p>
+
+						<p>
+							Email us:
+							<a href="mailto:cs@cpscentral.com">cs@cpscentral.com</a>
+						</p>
+
+						<p><a class="font-bold" href="#">CPS Privacy Policy</a></p>
+					</div>
 				</div>
 			</div>
 		</footer>
