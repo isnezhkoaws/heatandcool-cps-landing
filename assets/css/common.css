@@ -58,6 +58,10 @@ body {
   }
 }
 
+.bg-cloud {
+  background-color: var(--color-сloud);
+}
+
 /* ==========================================================================
    Buttons
    ========================================================================== */
@@ -164,4 +168,40 @@ body {
 .divider-logo {
   width: 32px;
   flex-shrink: 0;
+}
+
+.breadcrumbs {
+  padding-top: 20px;
+}
+
+.breadcrumbs ul {
+  color: #626B7A;
+  font-family: var(--font-inter);
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.breadcrumbs span {
+  color: var(--color-cyan);
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs li + li:before {
+  content: '»';
+  display: inline-block;
+  margin: 0 2px;
+  font-size: 14px;
+}
+
+.text-cyan {
+  color: var(--color-cyan);
 }

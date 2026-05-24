@@ -1,0 +1,7 @@
+.page-faq .section-divider {
+  font-family: var(--font-inter);
+}
+
+.page-faq .divider-label {
+  background-color: var(--color-сloud);
+}
