@@ -3,5 +3,21 @@
 }
 
 .page-faq .divider-label {
+  font-size: 12px;
+  padding: 4px 14px;
   background-color: var(--color-сloud);
 }
+
+.page-faq .section-kicker {
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.section-faq-features .section-text {
+  max-width: 660px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 25px;
+}
+

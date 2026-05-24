@@ -408,19 +408,4 @@
     flex-direction: column;
     gap: 12px;
   }
-
-  .features-grid {
-    max-width: max-content;
-    margin: 0 auto;
-    padding-top: 20px;
-  }
-
-  .hero-title {
-    font-size: 50px;
-  }
-
-  .features-grid {
-    padding-top: 0;
-    padding-bottom: 20px;
-  }
 }

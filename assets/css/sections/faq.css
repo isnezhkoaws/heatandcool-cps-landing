@@ -1,0 +1,126 @@
+.section-faq-accordions {
+  padding-top: 16px;
+  padding-bottom: 60px;
+}
+
+.section-faq-accordions .section-title {
+  letter-spacing: 0.8px;
+  margin-bottom: 20px;
+}
+
+.faq-list {
+  max-width: 1090px;
+}
+
+.faq-item {
+  border: 1px solid var(--color-black);
+  border-radius: 5px;
+  background: #e3e8ee;
+}
+
+.faq-item + .faq-item {
+  margin-top: 10px;
+}
+
+.faq-item__trigger {
+  font-family: var(--font-inter);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 20px;
+  padding-right: 26px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 24px;
+  color: #2d3a4d;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  appearance: none;
+}
+
+.faq-item__panel--inner {
+  padding-bottom: 12px;
+}
+
+.faq-item__lead {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid var(--color-black);
+  flex-shrink: 0;
+}
+
+.faq-item__text {
+  white-space: nowrap;
+}
+
+.faq-item__chevron {
+  width: 8px;
+  height: 8px;
+  margin-left: auto;
+  border-right: 1px solid var(--color-black);
+  border-bottom: 1px solid var(--color-black);
+  transform: rotate(45deg) translateY(-1px);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.faq-item__panel {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #626b7a;
+  padding: 0 20px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.32s ease, opacity 0.24s ease;
+}
+
+.faq-item__panel p {
+  margin: 0;
+}
+
+.faq-item.is-open {
+  border-color: var(--color-cyan);
+}
+
+.faq-item.is-open .faq-item__text {
+  color: var(--color-cyan);
+}
+
+.faq-item.is-open .faq-item__lead {
+  border-left-color: var(--color-cyan);
+}
+
+.faq-item.is-open .faq-item__chevron {
+  transform: rotate(-135deg) translateY(-1px);
+}
+
+.faq-item.is-open .faq-item__panel {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .faq-item__trigger {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    line-height: 22px;
+    padding-right: 16px;
+  }
+
+  .faq-item__text {
+    white-space: normal;
+  }
+
+  .faq-item__panel {
+    line-height: 22px;
+    padding: 0 16px 12px 16px;
+  }
+}

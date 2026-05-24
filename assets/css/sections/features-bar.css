@@ -65,7 +65,24 @@
   }
 
   .features-bar {
-    margin-top: 16px;
+    margin-top: 22px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .features-grid {
+    max-width: max-content;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .hero-title {
+    font-size: 50px;
+  }
+
+  .features-grid {
+    padding-top: 0;
+    padding-bottom: 20px;
   }
 }
 
@@ -80,8 +97,13 @@
     display: flex;
     gap: 60px;
     max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 var(--gutter);
     padding-top: 6px;
     margin-bottom: 22px;
+  }
+  .features-bar--font-secondary .features-grid {
+    gap: 40px;
   }
 }

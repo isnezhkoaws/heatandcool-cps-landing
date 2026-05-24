@@ -171,7 +171,11 @@ body {
 }
 
 .breadcrumbs {
-  padding-top: 20px;
+  padding-top: 26px;
+}
+
+.breadcrumbs .container {
+  max-width: 1554px;
 }
 
 .breadcrumbs ul {
@@ -200,6 +204,14 @@ body {
   display: inline-block;
   margin: 0 2px;
   font-size: 14px;
+}
+
+.font-secondary {
+  font-family: var(--font-inter);
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-cyan {
