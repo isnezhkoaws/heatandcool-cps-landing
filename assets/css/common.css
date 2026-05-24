@@ -96,7 +96,7 @@ body {
 }
 
 .btn-primary {
-  background: var(--color-orange);
+  background: var(--color-orange-dark);
   color: var(--color-white);
 }
 
@@ -111,7 +111,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-orange);
+  color: var(--color-red);
   text-align: center;
 }
 
@@ -216,4 +216,10 @@ body {
 
 .text-cyan {
   color: var(--color-cyan);
+}
+
+@media (max-width: 767px) {
+  .section-kicker {
+    font-size: 14px;
+  }
 }

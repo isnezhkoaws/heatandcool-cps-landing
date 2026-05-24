@@ -4,6 +4,7 @@
 
 :root {
   --color-orange: #e44d26;
+  --color-orange-dark: #d84020;
   --color-teal: #1cb5b3;
   --color-teal-light: #e8f7f7;
   --color-navy: #102a43;
@@ -15,6 +16,8 @@
   --color-border-light: #f0f4f8;
   --color-azure: #5B6577;
   --color-сloud: #F6F9FC;
+  --color-blue-deep: #0f4c81;
+  --color-red: #e63946;
   --container-max: 1200px;
   --color-cyan: #00AFBA;
   --header-container: 1920px;
