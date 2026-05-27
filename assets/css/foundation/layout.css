@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.container,
+.header-container,
+.action-container,
+.categories-container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container {
+  max-width: var(--container-max);
+}
+
+.header-container {
+  max-width: var(--header-container);
+}
+
+.action-container {
+  max-width: var(--action-container);
+  padding: 0 30px;
+}
+
+.categories-container {
+  max-width: var(--categories-container);
+}
+
+.footer-container {
+  max-width: var(--footer-container);
+  width: 100%;
+}

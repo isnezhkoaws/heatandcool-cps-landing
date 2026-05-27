@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+
+.bg-cloud {
+  background-color: var(--color-cloud);
+}
+
+.font-secondary {
+  font-family: var(--font-inter);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-cyan {
+  color: var(--color-cyan);
+}

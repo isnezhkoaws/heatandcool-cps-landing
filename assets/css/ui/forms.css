@@ -1,0 +1,76 @@
+/* ==========================================================================
+   UI: Forms
+   ========================================================================== */
+
+label {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]):not([type="color"]),
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-white);
+  color: var(--color-heading);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]):not([type="color"]),
+select {
+  min-height: 42px;
+  padding: 10px 12px;
+}
+
+textarea {
+  min-height: 120px;
+  padding: 12px;
+  resize: vertical;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]):not([type="color"])::placeholder,
+textarea::placeholder {
+  color: var(--color-azure);
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]):not([type="color"]):focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 175, 186, 0.2);
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]):not([type="color"]):disabled,
+select:disabled,
+textarea:disabled {
+  background: var(--color-border-light);
+  cursor: not-allowed;
+  opacity: 0.9;
+}
+
+.form-group + .form-group {
+  margin-top: 16px;
+}
+
+.form-help {
+  margin-top: 6px;
+  font-family: var(--font-inter);
+  font-size: 12px;
+  color: var(--color-azure);
+}
+
+.form-error {
+  margin-top: 6px;
+  font-family: var(--font-inter);
+  font-size: 12px;
+  color: var(--color-red);
+}

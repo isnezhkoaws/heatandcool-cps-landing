@@ -1,0 +1,47 @@
+/* ==========================================================================
+   UI: Buttons
+   ========================================================================== */
+
+.btn,
+.btn_2,
+.btn--sm {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.btn {
+  min-width: 270px;
+}
+
+.btn_2,
+.btn--sm {
+  padding: 6px 10px;
+  min-width: 110px;
+  text-align: center;
+}
+
+.btn:hover,
+.btn_2:hover,
+.btn--sm:hover {
+  opacity: 0.9;
+}
+
+.btn:focus-visible,
+.btn_2:focus-visible,
+.btn--sm:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background: var(--color-orange-dark);
+  color: var(--color-white);
+}

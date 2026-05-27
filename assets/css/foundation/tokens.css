@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Tokens
+   ========================================================================== */
+
+:root {
+  --color-orange: #e44d26;
+  --color-orange-dark: #d84020;
+  --color-teal: #1cb5b3;
+  --color-teal-light: #e8f7f7;
+  --color-navy: #102a43;
+  --color-text: #334e68;
+  --color-heading: #243b53;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-border: #d9e2ec;
+  --color-border-light: #f0f4f8;
+  --color-azure: #5b6577;
+  --color-cloud: #f6f9fc;
+  --color-blue-deep: #0f4c81;
+  --color-red: #e63946;
+  --color-cyan: #00afba;
+
+  /* Legacy alias (Cyrillic "с") for backward compatibility */
+  --color-сloud: var(--color-cloud);
+
+  --container-max: 1200px;
+  --header-container: 1920px;
+  --action-container: 1340px;
+  --categories-container: 1200px;
+  --footer-container: 1350px;
+  --header-height: 72px;
+
+  --font-sans:
+    "Oswald", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+
+  --gutter: 20px;
+  --bp-tablet: 768px;
+  --bp-desktop: 992px;
+  --bp-header: 1200px;
+
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease-in-out;
+  --transition-slow: 0.8s ease-in-out;
+}
