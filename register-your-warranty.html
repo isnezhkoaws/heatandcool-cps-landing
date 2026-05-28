@@ -88,19 +88,19 @@
 			</nav>
 		</header>
 		<main class="page-register">
-      <section class="hero">
+      <section class="hero hero--medium">
 				<picture class="hero-bg">
-					<source media="(max-width: 767px)" srcset="assets/images/banner-mobile.jpg" />
+					<source media="(max-width: 767px)" srcset="assets/images/register/register-hero-mobile.jpg" />
 					<img
 						class="hero-bg__image"
-						src="assets/images/main_hero.jpg"
+						src="assets/images/register/register-hero.jpg"
 						alt="House with outdoor air conditioning unit"
 					/>
 				</picture>
 				<div class="hero-overlay"></div>
 				<div class="container hero-content">
 					<h1 class="hero-title">
-						REGISTER YOUR Warranty
+						REGISTER <br> YOUR Warranty
 					</h1>
           <div class="hero-description">
             <p>Website operated by Consumer Priority Service. Register your Heat & Cool warranty.</p>
@@ -112,171 +112,188 @@
 					<form class="warranty-form" action="#" method="post">
 						<div class="warranty-form__grid">
 							<div class="warranty-form__col">
-								<fieldset class="form-section form-section--product">
-									<legend class="form-section__title">Product Information</legend>
-									<div class="form-stack">
-										<div class="form-row">
-											<div class="form-field">
-												<label for="serial-number">Serial Number</label>
-												<input id="serial-number" name="serialNumber" type="text" placeholder="e.g. SN-123456789" />
-												<p class="field-help">Where can I find my ID?</p>
-											</div>
-											<div class="form-field">
-												<label for="model-name">Model Name <span class="required-star">*</span></label>
-												<input id="model-name" name="modelName" type="text" placeholder="e.g. Pro X200" required />
-											</div>
-										</div>
-										<div class="form-field">
-											<label for="purchase-place">Place of Purchase</label>
-											<input id="purchase-place" name="purchasePlace" type="text" placeholder="Store name or website" />
-										</div>
-										<div class="form-row">
-											<div class="form-field">
-												<label for="purchase-price">Purchase Price <span class="required-star">*</span></label>
-												<input id="purchase-price" name="purchasePrice" type="text" inputmode="decimal" placeholder="$0.00" required />
-											</div>
-											<div class="form-field">
-												<label for="purchase-date">Purchase Date <span class="required-star">*</span></label>
-												<input id="purchase-date" name="purchaseDate" type="text" placeholder="MM/DD/YYYY" required />
-											</div>
-										</div>
-									</div>
-								</fieldset>
-
-								<fieldset class="form-section form-section--product-secondary">
-									<legend class="form-section__title">Product Information</legend>
-									<div class="form-stack">
-										<div class="form-field">
-											<label for="upload-invoice">Upload invoice</label>
-											<div class="file-dropzone" data-file-dropzone>
-												<input id="upload-invoice" name="invoice" type="file" accept=".pdf,.jpg,.jpeg,.png" hidden />
-												<button type="button" class="file-dropzone__target" data-dropzone-target aria-controls="upload-invoice">
-													<span class="file-dropzone__icon" aria-hidden="true">
-														<svg xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
-															<path d="M13.0334 22V10.5M17.3834 15L13.0334 10.5L8.68335 15" stroke="#16325A" stroke-width="2" stroke-linecap="round"/>
-															<path d="M3.24584 15.5C1.07061 15.5 -1.64812 7 6.50837 7C6.50834 5 7.37819 1 13.0333 1C18.6883 1 19.9209 5.66667 19.5584 8C23.3646 7.5 27.7147 12 22.8209 15.5" stroke="#16325A" stroke-width="2" stroke-linecap="round"/>
-														</svg>
-													</span>
-													<span class="file-dropzone__title">Upload your invoice</span>
-													<span class="file-dropzone__text">Drag &amp; drop your file here or <span class="file-dropzone__browse">browse</span></span>
-													<span class="file-dropzone__meta">PDF, JPG, PNG • Max 10MB</span>
-												</button>
-												<div class="file-dropzone__selected" data-dropzone-selected hidden>
-													<div class="file-dropzone__file">
-														<span class="file-dropzone__file-icon" aria-hidden="true">
-															<svg viewBox="0 0 24 24" fill="none" focusable="false" aria-hidden="true">
-																<path d="M7 2.75h6l4 4v14.5a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 5 21.25V4.5A1.75 1.75 0 0 1 6.75 2.75Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
-																<path d="M13 2.75V7h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-															</svg>
-														</span>
-														<span class="file-dropzone__file-info">
-															<span class="file-dropzone__file-name" data-dropzone-file-name>invoice_2451.pdf</span>
-															<span class="file-dropzone__file-size" data-dropzone-file-size>1.2 MB</span>
-														</span>
-													</div>
-													<div class="file-dropzone__actions">
-														<span class="file-dropzone__check" aria-hidden="true">
-															<svg viewBox="0 0 24 24" fill="none" focusable="false" aria-hidden="true">
-																<circle cx="12" cy="12" r="8.25" stroke="currentColor" stroke-width="1.5" />
-																<path d="m8.6 12.3 2.3 2.3 4.5-4.6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
-															</svg>
-														</span>
-														<button type="button" class="file-dropzone__replace" data-dropzone-replace>Replace</button>
-														<button type="button" class="file-dropzone__remove" data-dropzone-remove aria-label="Remove uploaded invoice">
-															<svg viewBox="0 0 24 24" fill="none" focusable="false" aria-hidden="true">
-																<path d="M3.75 6.75h16.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-																<path d="M9.25 2.75h5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-																<path d="M7.25 6.75v12a2 2 0 0 0 2 2h5.5a2 2 0 0 0 2-2v-12" stroke="currentColor" stroke-width="1.7" />
-																<path d="M10 10.25v6.5M14 10.25v6.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-															</svg>
-														</button>
-													</div>
+								<div class="form-section form-section--product">
+									<span class="form-step-label hidden-desktop">Step 1 of 4</span>
+									<fieldset class="">
+										<legend class="form-section__title">Product Information</legend>
+										<div class="form-stack">
+											<div class="form-row">
+												<div class="form-field">
+													<label for="serial-number">Serial Number</label>
+													<input id="serial-number" name="serialNumber" type="text" placeholder="e.g. SN-123456789" />
+													<p class="field-help">Where can I find my ID?</p>
 												</div>
-												<p class="file-dropzone__error" data-dropzone-error aria-live="polite"></p>
+												<div class="form-field">
+													<label for="model-name">Model Name <span class="required-star">*</span></label>
+													<input id="model-name" name="modelName" type="text" placeholder="e.g. Pro X200" required />
+												</div>
+											</div>
+											<div class="form-field">
+												<label for="purchase-place">Place of Purchase</label>
+												<input id="purchase-place" name="purchasePlace" type="text" placeholder="Store name or website" />
+											</div>
+											<div class="form-row">
+												<div class="form-field">
+													<label for="purchase-price">Purchase Price <span class="required-star">*</span></label>
+													<input id="purchase-price" name="purchasePrice" type="text" inputmode="decimal" placeholder="$0.00" required />
+												</div>
+												<div class="form-field">
+													<label for="purchase-date">Purchase Date <span class="required-star">*</span></label>
+													<input id="purchase-date" name="purchaseDate" type="text" placeholder="MM/DD/YYYY" required />
+												</div>
 											</div>
 										</div>
-										<div class="info-box">
-											<span class="info-box__icon" aria-hidden="true">i</span>
-											<div>
-												<p class="info-box__title">Proof of purchase required</p>
-												<p class="info-box__text">Upload your invoice, receipt, or order confirmation for warranty verification.</p>
+									</fieldset>
+								</div>
+
+								<div class="form-section form-section--product-secondary">
+									<span class="form-step-label hidden-desktop">Step 2 of 4</span>
+									<fieldset class="">
+										<legend class="form-section__title">Product Information</legend>
+										<div class="form-stack">
+											<div class="form-field">
+												<label for="upload-invoice">Upload invoice</label>
+												<div class="file-dropzone" data-file-dropzone>
+													<input id="upload-invoice" name="invoice" type="file" accept=".pdf,.jpg,.jpeg,.png" hidden />
+													<button type="button" class="file-dropzone__target" data-dropzone-target aria-controls="upload-invoice">
+														<span class="file-dropzone__icon" aria-hidden="true">
+															<svg xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
+																<path d="M13.0334 22V10.5M17.3834 15L13.0334 10.5L8.68335 15" stroke="#16325A" stroke-width="2" stroke-linecap="round"/>
+																<path d="M3.24584 15.5C1.07061 15.5 -1.64812 7 6.50837 7C6.50834 5 7.37819 1 13.0333 1C18.6883 1 19.9209 5.66667 19.5584 8C23.3646 7.5 27.7147 12 22.8209 15.5" stroke="#16325A" stroke-width="2" stroke-linecap="round"/>
+															</svg>
+														</span>
+														<span class="file-dropzone__title">Upload your invoice</span>
+														<span class="file-dropzone__text">Drag &amp; drop your file here or <span class="file-dropzone__browse">browse</span></span>
+														<span class="file-dropzone__meta">PDF, JPG, PNG • Max 10MB</span>
+													</button>
+													<div class="file-dropzone__selected" data-dropzone-selected hidden>
+														<div class="file-dropzone__file">
+															<span class="file-dropzone__file-icon" aria-hidden="true">
+																<svg viewBox="0 0 24 24" fill="none" focusable="false" aria-hidden="true">
+																	<path d="M7 2.75h6l4 4v14.5a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 5 21.25V4.5A1.75 1.75 0 0 1 6.75 2.75Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+																	<path d="M13 2.75V7h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+																</svg>
+															</span>
+															<span class="file-dropzone__file-info">
+																<span class="file-dropzone__file-name" data-dropzone-file-name>invoice_2451.pdf</span>
+																<span class="file-dropzone__file-size" data-dropzone-file-size>1.2 MB</span>
+															</span>
+														</div>
+														<div class="file-dropzone__actions">
+															<span class="file-dropzone__check" aria-hidden="true">
+																<svg viewBox="0 0 24 24" fill="none" focusable="false" aria-hidden="true">
+																	<circle cx="12" cy="12" r="8.25" stroke="currentColor" stroke-width="1.5" />
+																	<path d="m8.6 12.3 2.3 2.3 4.5-4.6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+																</svg>
+															</span>
+															<button type="button" class="file-dropzone__replace" data-dropzone-replace>Replace</button>
+															<button type="button" class="file-dropzone__remove" data-dropzone-remove aria-label="Remove uploaded invoice">
+																<svg viewBox="0 0 24 24" fill="none" focusable="false" aria-hidden="true">
+																	<path d="M3.75 6.75h16.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+																	<path d="M9.25 2.75h5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+																	<path d="M7.25 6.75v12a2 2 0 0 0 2 2h5.5a2 2 0 0 0 2-2v-12" stroke="currentColor" stroke-width="1.7" />
+																	<path d="M10 10.25v6.5M14 10.25v6.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+																</svg>
+															</button>
+														</div>
+													</div>
+													<p class="file-dropzone__error" data-dropzone-error aria-live="polite"></p>
+												</div>
+											</div>
+											<div class="info-box">
+												<span class="info-box__icon" aria-hidden="true">
+													<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+														<circle cx="9.5" cy="9.5" r="8.55" stroke="#417ED6" stroke-width="1.9"/>
+														<path d="M8.36262 14.2497V7.89143H10.0364V14.2497H8.36262ZM9.20411 6.88348C8.93902 6.88348 8.71093 6.79563 8.51982 6.61994C8.32871 6.44116 8.23315 6.22693 8.23315 5.97726C8.23315 5.7245 8.32871 5.51027 8.51982 5.33457C8.71093 5.1558 8.93902 5.06641 9.20411 5.06641C9.47228 5.06641 9.70038 5.1558 9.8884 5.33457C10.0795 5.51027 10.1751 5.7245 10.1751 5.97726C10.1751 6.22693 10.0795 6.44116 9.8884 6.61994C9.70038 6.79563 9.47228 6.88348 9.20411 6.88348Z" fill="#417ED6"/>
+													</svg>
+												</span>
+												<div>
+													<p class="info-box__title">Proof of purchase required</p>
+													<p class="info-box__text">Upload your invoice, receipt, or order confirmation for warranty verification.</p>
+												</div>
 											</div>
 										</div>
-									</div>
-								</fieldset>
+									</fieldset>
+								</div>
 							</div>
 
 							<div class="warranty-form__col">
-								<fieldset class="form-section form-section--customer">
-									<legend class="form-section__title">Customer Information</legend>
-									<div class="form-stack">
-										<div class="form-row">
-											<div class="form-field">
-												<label for="first-name">First Name <span class="required-star">*</span></label>
-												<input id="first-name" name="firstName" type="text" placeholder="Jane" required />
+								<div class="form-section form-section--customer">
+									<span class="form-step-label hidden-desktop">Step 3 of 4</span>
+									<fieldset class="">
+										<legend class="form-section__title">Customer Information</legend>
+										<div class="form-stack">
+											<div class="form-row">
+												<div class="form-field">
+													<label for="first-name">First Name <span class="required-star">*</span></label>
+													<input id="first-name" name="firstName" type="text" placeholder="Jane" required />
+												</div>
+												<div class="form-field">
+													<label for="last-name">Last Name <span class="required-star">*</span></label>
+													<input id="last-name" name="lastName" type="text" placeholder="Smith" required />
+												</div>
 											</div>
 											<div class="form-field">
-												<label for="last-name">Last Name <span class="required-star">*</span></label>
-												<input id="last-name" name="lastName" type="text" placeholder="Smith" required />
+												<label for="phone">Phone <span class="required-star">*</span></label>
+												<input id="phone" name="phone" type="tel" placeholder="+1 (555) 000-0000" required />
+											</div>
+											<div class="form-field">
+												<label for="address">Address <span class="required-star">*</span></label>
+												<input id="address" name="address" type="text" placeholder="123 Main St, Apt 4B" required />
+											</div>
+											<div class="form-field">
+												<label for="email">Email <span class="required-star">*</span></label>
+												<input id="email" name="email" type="email" placeholder="jane@example.com" required />
 											</div>
 										</div>
-										<div class="form-field">
-											<label for="phone">Phone <span class="required-star">*</span></label>
-											<input id="phone" name="phone" type="tel" placeholder="+1 (555) 000-0000" required />
-										</div>
-										<div class="form-field">
-											<label for="address">Address <span class="required-star">*</span></label>
-											<input id="address" name="address" type="text" placeholder="123 Main St, Apt 4B" required />
-										</div>
-										<div class="form-field">
-											<label for="email">Email <span class="required-star">*</span></label>
-											<input id="email" name="email" type="email" placeholder="jane@example.com" required />
-										</div>
-									</div>
-								</fieldset>
+									</fieldset>
+								</div>
 
-								<fieldset class="form-section form-section--location">
-									<legend class="form-section__title">Location</legend>
-									<div class="form-stack">
-										<div class="form-row">
-											<div class="form-field">
-												<label for="city">City <span class="required-star">*</span></label>
-												<input id="city" name="city" type="text" placeholder="New York" required />
+								<div class="form-section form-section--location">
+									<span class="form-step-label hidden-desktop">Step 4 of 4</span>
+									<fieldset>
+										<legend class="form-section__title">Location</legend>
+										<div class="form-stack">
+											<div class="form-row">
+												<div class="form-field">
+													<label for="city">City <span class="required-star">*</span></label>
+													<input id="city" name="city" type="text" placeholder="New York" required />
+												</div>
+												<div class="form-field">
+													<label for="state">State <span class="required-star">*</span></label>
+													<select id="state" name="state" required>
+														<option value="" selected disabled>Select state</option>
+														<option value="ny">New York</option>
+														<option value="ca">California</option>
+														<option value="tx">Texas</option>
+													</select>
+												</div>
 											</div>
-											<div class="form-field">
-												<label for="state">State <span class="required-star">*</span></label>
-												<select id="state" name="state" required>
-													<option value="" selected disabled>Select state</option>
-													<option value="ny">New York</option>
-													<option value="ca">California</option>
-													<option value="tx">Texas</option>
-												</select>
+											<div class="form-row">
+												<div class="form-field">
+													<label for="zip-code">Zip Code <span class="required-star">*</span></label>
+													<input id="zip-code" name="zipCode" type="text" placeholder="10001" required />
+												</div>
+												<div class="form-field">
+													<label for="country">Country <span class="required-star">*</span></label>
+													<select id="country" name="country" required>
+														<option value="" selected disabled>Select country</option>
+														<option value="us">United States</option>
+														<option value="ca">Canada</option>
+														<option value="mx">Mexico</option>
+													</select>
+												</div>
+											</div>
+											<div class="marketing-optin">
+												<input id="marketing-optin" name="marketingOptIn" type="checkbox" />
+												<label for="marketing-optin">
+													<span class="marketing-optin__title">Marketing communications (optional)</span>
+													<span class="marketing-optin__text">Sign up for product updates, tips, and offers via email or phone</span>
+												</label>
 											</div>
 										</div>
-										<div class="form-row">
-											<div class="form-field">
-												<label for="zip-code">Zip Code <span class="required-star">*</span></label>
-												<input id="zip-code" name="zipCode" type="text" placeholder="10001" required />
-											</div>
-											<div class="form-field">
-												<label for="country">Country <span class="required-star">*</span></label>
-												<select id="country" name="country" required>
-													<option value="" selected disabled>Select country</option>
-													<option value="us">United States</option>
-													<option value="ca">Canada</option>
-													<option value="mx">Mexico</option>
-												</select>
-											</div>
-										</div>
-										<div class="marketing-optin">
-											<input id="marketing-optin" name="marketingOptIn" type="checkbox" />
-											<label for="marketing-optin">
-												<span class="marketing-optin__title">Marketing communications (optional)</span>
-												<span class="marketing-optin__text">Sign up for product updates, tips, and offers via email or phone</span>
-											</label>
-										</div>
-									</div>
-								</fieldset>
+									</fieldset>
+								</div>
 							</div>
 						</div>
 
