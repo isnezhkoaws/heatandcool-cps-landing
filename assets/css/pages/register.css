@@ -563,6 +563,10 @@
     gap: 50px;
   }
 
+  .form-section--product {
+    margin-bottom: 50px;
+  }
+
   .form-section--product-secondary {
     margin-top: auto;
   }

@@ -113,7 +113,7 @@ textarea::placeholder {
 input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]):not([type="color"]):focus,
 select:focus,
 textarea:focus {
-  outline: 1px solid #626b7a;
+  outline: 1px solid #000;
   outline-offset: 0;
 }
 
