@@ -20,7 +20,6 @@
   --color-red: #e63946;
   --color-cyan: #00afba;
 
-  /* Legacy alias (Cyrillic "с") for backward compatibility */
   --color-сloud: var(--color-cloud);
 
   --container-max: 1200px;

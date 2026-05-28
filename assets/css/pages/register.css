@@ -2,4 +2,277 @@
    Register Warranty Page
    ========================================================================== */
 
-/* Intentionally empty for now. Add page-specific overrides here. */
+.page-register {
+  padding: 28px 0 72px;
+}
+
+.page-register .container {
+  max-width: 1264px;
+}
+
+.warranty-form {
+  font-family: var(--font-inter);
+}
+
+.warranty-form__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.form-section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.form-section__title {
+  width: 100%;
+  margin: 0 0 16px;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #333232;
+  text-align: center;
+}
+
+.form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.warranty-form label {
+  display: block;
+  margin-bottom: 9px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #2d3a4d;
+}
+
+.required-star {
+  color: var(--color-orange-dark);
+}
+
+.warranty-form input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]):not([type="color"]),
+.warranty-form select,
+.warranty-form textarea {
+  border-color: #626b7a;
+  color: #2d3a4d;
+}
+
+.warranty-form input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]):not([type="color"]),
+.warranty-form select {
+  min-height: 50px;
+  padding: 15px 21px;
+}
+
+.warranty-form select {
+  padding-right: 52px;
+  background-position: right 21px center;
+}
+
+.warranty-form input::placeholder,
+.warranty-form textarea::placeholder,
+.warranty-form .field-muted {
+  color: #626b7a;
+}
+
+.field-help {
+  margin-top: 8px;
+  font-size: 10px;
+  line-height: 20px;
+  color: #2d3a4d;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px dashed #bebebe;
+  border-radius: 4px;
+  min-height: 161px;
+  padding: 20px;
+  text-align: center;
+  background: var(--color-white);
+}
+
+.upload-icon {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background: #e0fafa;
+  color: #2d3a4d;
+  font-size: 20px;
+}
+
+.upload-title {
+  font-weight: 700;
+  line-height: 20px;
+  color: #000;
+}
+
+.upload-text {
+  line-height: 20px;
+  color: #000;
+}
+
+.upload-browse {
+  font-weight: 500;
+  color: #4a6cf7;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.upload-meta {
+  font-size: 12px;
+  line-height: 20px;
+  color: #939393;
+}
+
+.info-box {
+  display: grid;
+  grid-template-columns: 19px 1fr;
+  align-items: start;
+  gap: 10px;
+  padding: 14px 16px 14px 28px;
+  border-radius: 4px;
+  background: #eef3fb;
+}
+
+.info-box__icon {
+  display: inline-flex;
+  width: 19px;
+  height: 19px;
+  align-items: center;
+  justify-content: center;
+  color: #2a63cc;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.info-box__title {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #1e3a6e;
+}
+
+.info-box__text {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2c4a80;
+}
+
+.marketing-optin {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 10px;
+  align-items: start;
+  margin-top: 8px;
+}
+
+.marketing-optin label {
+  margin: 0;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.marketing-optin input[type="checkbox"] {
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #626b7a;
+  border-radius: 4px;
+  appearance: none;
+  background: var(--color-white);
+  position: relative;
+}
+
+.marketing-optin input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #2d3a4d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.marketing-optin__title {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #3a3a3a;
+}
+
+.marketing-optin__text {
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+  color: #3a3a3a;
+}
+
+.warranty-form__actions {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.warranty-submit {
+  width: 100%;
+  max-width: 448px;
+  min-width: 0;
+  min-height: 55px;
+  padding: 15px 24px;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  line-height: 20px;
+}
+
+@media (min-width: 768px) {
+  .form-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 21px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .warranty-form__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px;
+  }
+
+  .form-section--product-secondary {
+    margin-top: 50px;
+  }
+
+  .form-section--location {
+    margin-top: 40px;
+  }
+}

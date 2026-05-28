@@ -87,9 +87,164 @@
 				</div>
 			</nav>
 		</header>
-    <div class="container">
-      
-    </div>
+		<main class="page-register">
+      <section class="hero">
+				<div
+					class="hero-bg"
+					role="img"
+					aria-label="House with outdoor air conditioning unit"
+				></div>
+				<div class="hero-overlay"></div>
+				<div class="container hero-content">
+					<h1 class="hero-title">
+						REGISTER YOUR Warranty
+					</h1>
+          <div class="hero-description">
+            <p>Website operated by Consumer Priority Service. Register your Heat & Cool warranty.</p>
+          </div>
+				</div>
+			</section>
+			<section class="register-warranty">
+				<div class="container">
+					<form class="warranty-form" action="#" method="post">
+						<div class="warranty-form__grid">
+							<div class="warranty-form__col">
+								<fieldset class="form-section form-section--product">
+									<legend class="form-section__title">Product Information</legend>
+									<div class="form-stack">
+										<div class="form-row">
+											<div class="form-field">
+												<label for="serial-number">Serial Number</label>
+												<input id="serial-number" name="serialNumber" type="text" placeholder="e.g. SN-123456789" />
+												<p class="field-help">Where can I find my ID?</p>
+											</div>
+											<div class="form-field">
+												<label for="model-name">Model Name <span class="required-star">*</span></label>
+												<input id="model-name" name="modelName" type="text" placeholder="e.g. Pro X200" required />
+											</div>
+										</div>
+										<div class="form-field">
+											<label for="purchase-place">Place of Purchase</label>
+											<input id="purchase-place" name="purchasePlace" type="text" placeholder="Store name or website" />
+										</div>
+										<div class="form-row">
+											<div class="form-field">
+												<label for="purchase-price">Purchase Price <span class="required-star">*</span></label>
+												<input id="purchase-price" name="purchasePrice" type="text" inputmode="decimal" placeholder="$0.00" required />
+											</div>
+											<div class="form-field">
+												<label for="purchase-date">Purchase Date <span class="required-star">*</span></label>
+												<input id="purchase-date" name="purchaseDate" type="text" placeholder="MM/DD/YYYY" required />
+											</div>
+										</div>
+									</div>
+								</fieldset>
+
+								<fieldset class="form-section form-section--product-secondary">
+									<legend class="form-section__title">Product Information</legend>
+									<div class="form-stack">
+										<div class="form-field">
+											<label for="upload-invoice">Upload invoice</label>
+											<div class="upload-box">
+												<span class="upload-icon" aria-hidden="true">⇪</span>
+												<p class="upload-title">Upload your invoice</p>
+												<p class="upload-text">Drag &amp; drop your file here or <label class="upload-browse" for="upload-invoice">browse</label></p>
+												<p class="upload-meta">PDF, JPG, PNG • Max 10MB</p>
+											</div>
+											<input id="upload-invoice" name="invoice" type="file" accept=".pdf,.jpg,.jpeg,.png" hidden />
+										</div>
+										<div class="info-box">
+											<span class="info-box__icon" aria-hidden="true">i</span>
+											<div>
+												<p class="info-box__title">Proof of purchase required</p>
+												<p class="info-box__text">Upload your invoice, receipt, or order confirmation for warranty verification.</p>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+
+							<div class="warranty-form__col">
+								<fieldset class="form-section form-section--customer">
+									<legend class="form-section__title">Customer Information</legend>
+									<div class="form-stack">
+										<div class="form-row">
+											<div class="form-field">
+												<label for="first-name">First Name <span class="required-star">*</span></label>
+												<input id="first-name" name="firstName" type="text" placeholder="Jane" required />
+											</div>
+											<div class="form-field">
+												<label for="last-name">Last Name <span class="required-star">*</span></label>
+												<input id="last-name" name="lastName" type="text" placeholder="Smith" required />
+											</div>
+										</div>
+										<div class="form-field">
+											<label for="phone">Phone <span class="required-star">*</span></label>
+											<input id="phone" name="phone" type="tel" placeholder="+1 (555) 000-0000" required />
+										</div>
+										<div class="form-field">
+											<label for="address">Address <span class="required-star">*</span></label>
+											<input id="address" name="address" type="text" placeholder="123 Main St, Apt 4B" required />
+										</div>
+										<div class="form-field">
+											<label for="email">Email <span class="required-star">*</span></label>
+											<input id="email" name="email" type="email" placeholder="jane@example.com" required />
+										</div>
+									</div>
+								</fieldset>
+
+								<fieldset class="form-section form-section--location">
+									<legend class="form-section__title">Location</legend>
+									<div class="form-stack">
+										<div class="form-row">
+											<div class="form-field">
+												<label for="city">City <span class="required-star">*</span></label>
+												<input id="city" name="city" type="text" placeholder="New York" required />
+											</div>
+											<div class="form-field">
+												<label for="state">State <span class="required-star">*</span></label>
+												<select id="state" name="state" required>
+													<option value="" selected disabled>Select state</option>
+													<option value="ny">New York</option>
+													<option value="ca">California</option>
+													<option value="tx">Texas</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-row">
+											<div class="form-field">
+												<label for="zip-code">Zip Code <span class="required-star">*</span></label>
+												<input id="zip-code" name="zipCode" type="text" placeholder="10001" required />
+											</div>
+											<div class="form-field">
+												<label for="country">Country <span class="required-star">*</span></label>
+												<select id="country" name="country" required>
+													<option value="" selected disabled>Select country</option>
+													<option value="us">United States</option>
+													<option value="ca">Canada</option>
+													<option value="mx">Mexico</option>
+												</select>
+											</div>
+										</div>
+										<div class="marketing-optin">
+											<input id="marketing-optin" name="marketingOptIn" type="checkbox" />
+											<label for="marketing-optin">
+												<span class="marketing-optin__title">Marketing communications (optional)</span>
+												<span class="marketing-optin__text">Sign up for product updates, tips, and offers via email or phone</span>
+											</label>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+						</div>
+
+						<div class="warranty-form__actions">
+							<button type="submit" class="btn btn-primary warranty-submit">Register Your Product</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
 		<footer class="site-footer">
 			<div class="header-container footer-inner">
 				<div class="footer-logos">
