@@ -98,6 +98,30 @@
   text-underline-offset: 2px;
 }
 
+.form-field--invalid > label,
+.form-field--invalid .field-help {
+  color: var(--color-orange-dark);
+}
+
+.form-field--invalid input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]):not([type="color"]),
+.form-field--invalid select,
+.form-field--invalid textarea {
+  border-color: var(--color-orange-dark);
+  color: var(--color-orange-dark);
+}
+
+.form-field__error {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--color-orange-dark);
+}
+
+.form-field__error[hidden] {
+  display: none !important;
+}
+
 .file-dropzone {
   display: flex;
   flex-direction: column;
