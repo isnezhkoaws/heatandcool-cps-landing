@@ -165,11 +165,13 @@ function initFileDropzones() {
 
     const clearError = () => {
       errorText.textContent = "";
+      errorText.hidden = true;
       target.classList.remove("is-invalid");
     };
 
     const showError = (message) => {
       errorText.textContent = message;
+      errorText.hidden = false;
       target.classList.add("is-invalid");
     };
 
