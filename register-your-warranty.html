@@ -43,7 +43,7 @@
 				<nav class="nav-desktop" aria-label="Main navigation">
 					<ul class="nav-primary">
 						<li><a href="index.html" aria-current="page">Home</a></li>
-						<li><a href="#">Register Your Warranty</a></li>
+						<li><a href="/register-your-warranty.html">Register Your Warranty</a></li>
 						<li><a href="#">File a Claim</a></li>
 						<li><a href="#">Purchase Comprehensive Coverage</a></li>
 					</ul>
@@ -78,7 +78,7 @@
 				<div class="header-container">
 					<ul>
 						<li><a href="index.html" aria-current="page">Home</a></li>
-						<li><a href="#">Register Your Warranty</a></li>
+						<li><a href="/register-your-warranty.html">Register Your Warranty</a></li>
 						<li><a href="#">File a Claim</a></li>
 						<li><a href="#">Purchase Comprehensive Coverage</a></li>
 						<li><a href="faq.html">FAQ</a></li>
@@ -145,13 +145,52 @@
 									<div class="form-stack">
 										<div class="form-field">
 											<label for="upload-invoice">Upload invoice</label>
-											<div class="upload-box">
-												<span class="upload-icon" aria-hidden="true">⇪</span>
-												<p class="upload-title">Upload your invoice</p>
-												<p class="upload-text">Drag &amp; drop your file here or <label class="upload-browse" for="upload-invoice">browse</label></p>
-												<p class="upload-meta">PDF, JPG, PNG • Max 10MB</p>
+											<div class="file-dropzone" data-file-dropzone>
+												<input id="upload-invoice" name="invoice" type="file" accept=".pdf,.jpg,.jpeg,.png" hidden />
+												<button type="button" class="file-dropzone__target" data-dropzone-target aria-controls="upload-invoice">
+													<span class="file-dropzone__icon" aria-hidden="true">
+														<svg xmlns="http://www.w3.org/2000/svg" width="26" height="23" viewBox="0 0 26 23" fill="none">
+															<path d="M13.0334 22V10.5M17.3834 15L13.0334 10.5L8.68335 15" stroke="#16325A" stroke-width="2" stroke-linecap="round"/>
+															<path d="M3.24584 15.5C1.07061 15.5 -1.64812 7 6.50837 7C6.50834 5 7.37819 1 13.0333 1C18.6883 1 19.9209 5.66667 19.5584 8C23.3646 7.5 27.7147 12 22.8209 15.5" stroke="#16325A" stroke-width="2" stroke-linecap="round"/>
+														</svg>
+													</span>
+													<span class="file-dropzone__title">Upload your invoice</span>
+													<span class="file-dropzone__text">Drag &amp; drop your file here or <span class="file-dropzone__browse">browse</span></span>
+													<span class="file-dropzone__meta">PDF, JPG, PNG • Max 10MB</span>
+												</button>
+												<div class="file-dropzone__selected" data-dropzone-selected hidden>
+													<div class="file-dropzone__file">
+														<span class="file-dropzone__file-icon" aria-hidden="true">
+															<svg viewBox="0 0 24 24" fill="none" focusable="false" aria-hidden="true">
+																<path d="M7 2.75h6l4 4v14.5a1.75 1.75 0 0 1-1.75 1.75h-8.5A1.75 1.75 0 0 1 5 21.25V4.5A1.75 1.75 0 0 1 6.75 2.75Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+																<path d="M13 2.75V7h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+														<span class="file-dropzone__file-info">
+															<span class="file-dropzone__file-name" data-dropzone-file-name>invoice_2451.pdf</span>
+															<span class="file-dropzone__file-size" data-dropzone-file-size>1.2 MB</span>
+														</span>
+													</div>
+													<div class="file-dropzone__actions">
+														<span class="file-dropzone__check" aria-hidden="true">
+															<svg viewBox="0 0 24 24" fill="none" focusable="false" aria-hidden="true">
+																<circle cx="12" cy="12" r="8.25" stroke="currentColor" stroke-width="1.5" />
+																<path d="m8.6 12.3 2.3 2.3 4.5-4.6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+															</svg>
+														</span>
+														<button type="button" class="file-dropzone__replace" data-dropzone-replace>Replace</button>
+														<button type="button" class="file-dropzone__remove" data-dropzone-remove aria-label="Remove uploaded invoice">
+															<svg viewBox="0 0 24 24" fill="none" focusable="false" aria-hidden="true">
+																<path d="M3.75 6.75h16.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+																<path d="M9.25 2.75h5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+																<path d="M7.25 6.75v12a2 2 0 0 0 2 2h5.5a2 2 0 0 0 2-2v-12" stroke="currentColor" stroke-width="1.7" />
+																<path d="M10 10.25v6.5M14 10.25v6.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+															</svg>
+														</button>
+													</div>
+												</div>
+												<p class="file-dropzone__error" data-dropzone-error aria-live="polite"></p>
 											</div>
-											<input id="upload-invoice" name="invoice" type="file" accept=".pdf,.jpg,.jpeg,.png" hidden />
 										</div>
 										<div class="info-box">
 											<span class="info-box__icon" aria-hidden="true">i</span>

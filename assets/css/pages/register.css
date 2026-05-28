@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .page-register {
-  padding: 28px 0 72px;
+  padding-bottom: 72px;
 }
 
 .page-register .container {
@@ -98,21 +98,50 @@
   text-underline-offset: 2px;
 }
 
-.upload-box {
+.file-dropzone {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.file-dropzone__target {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  width: 100%;
   border: 1px dashed #bebebe;
   border-radius: 4px;
   min-height: 161px;
   padding: 20px;
   text-align: center;
   background: var(--color-white);
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
 }
 
-.upload-icon {
+.file-dropzone__target:hover,
+.file-dropzone__target:focus-visible {
+  border-color: #4a6cf7;
+  outline: 0;
+}
+
+.file-dropzone__target.is-dragover {
+  border-color: #4a6cf7;
+  background: #f7f9ff;
+}
+
+.file-dropzone__target.is-invalid {
+  border-color: #d84020;
+  background: #fff7f5;
+}
+
+.file-dropzone__icon {
   display: inline-flex;
   width: 48px;
   height: 48px;
@@ -120,32 +149,151 @@
   align-items: center;
   justify-content: center;
   background: #e0fafa;
-  color: #2d3a4d;
-  font-size: 20px;
+  color: #23567a;
 }
 
-.upload-title {
+.file-dropzone__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.file-dropzone__title {
+  display: block;
   font-weight: 700;
   line-height: 20px;
   color: #000;
 }
 
-.upload-text {
+.file-dropzone__text {
+  display: block;
   line-height: 20px;
   color: #000;
 }
 
-.upload-browse {
+.file-dropzone__browse {
   font-weight: 500;
   color: #4a6cf7;
-  text-decoration: none;
-  cursor: pointer;
 }
 
-.upload-meta {
+.file-dropzone__meta {
+  display: block;
   font-size: 12px;
   line-height: 20px;
   color: #939393;
+}
+
+.file-dropzone__selected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 21px;
+  border: 1px solid #626b7a;
+  border-radius: 4px;
+  background: var(--color-white);
+}
+
+.file-dropzone__selected[hidden] {
+  display: none !important;
+}
+
+.file-dropzone__file {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
+
+.file-dropzone__file-icon {
+  width: 33px;
+  height: 45px;
+  color: #1cb5b3;
+  flex-shrink: 0;
+}
+
+.file-dropzone__file-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.file-dropzone__file-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.file-dropzone__file-name,
+.file-dropzone__file-size {
+  line-height: 24px;
+  color: #3a3a3a;
+}
+
+.file-dropzone__file-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-dropzone__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.file-dropzone__check {
+  width: 19px;
+  height: 19px;
+  color: #1cb5b3;
+}
+
+.file-dropzone__check svg {
+  width: 100%;
+  height: 100%;
+}
+
+.file-dropzone__replace,
+.file-dropzone__remove {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.file-dropzone__replace {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  font-family: var(--font-inter);
+  text-decoration: underline;
+  color: #4a6cf8;
+}
+
+.file-dropzone__replace:focus-visible,
+.file-dropzone__remove:focus-visible {
+  outline: 2px solid #4a6cf8;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.file-dropzone__remove {
+  width: 20px;
+  height: 20px;
+  color: #626b7a;
+}
+
+.file-dropzone__remove svg {
+  width: 100%;
+  height: 100%;
+}
+
+.file-dropzone__error {
+  margin: 0;
+  min-height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #d84020;
 }
 
 .info-box {
@@ -259,6 +407,17 @@
   .form-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 21px;
+  }
+}
+
+@media (max-width: 540px) {
+  .file-dropzone__selected {
+    flex-wrap: wrap;
+  }
+
+  .file-dropzone__actions {
+    width: 100%;
+    justify-content: flex-end;
   }
 }
 
