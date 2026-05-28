@@ -112,6 +112,7 @@
 .form-field--invalid textarea {
   border-color: var(--color-orange-dark);
   color: var(--color-orange-dark);
+  outline-color: var(--color-orange-dark);
 }
 
 .form-field__error {
