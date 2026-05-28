@@ -1,5 +1,5 @@
 @import 'foundation/reset.css';
-@import 'foundation/tokens.css';
+@import 'foundation/variables.css';
 @import 'foundation/base.css';
 @import 'foundation/layout.css';
 @import 'foundation/utilities.css';

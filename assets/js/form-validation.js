@@ -1,6 +1,9 @@
 const REQUIRED_FIELD_ERROR_TEXT = "The field is required";
 const EMAIL_FIELD_ERROR_TEXT = "Please enter a valid email address";
+const DATE_FIELD_LENGTH_ERROR_TEXT = "Date must be 10 characters (MM/DD/YYYY)";
+const DATE_FIELD_ERROR_TEXT = "Please enter a valid date (MM/DD/YYYY)";
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const DATE_PATTERN = /^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])\/\d{4}$/;
 
 function getValidationEventName(field) {
   if (field.tagName === "SELECT") return "change";
@@ -68,6 +71,44 @@ function validateField(field, form) {
     const emailValue = field.value.trim();
     if (emailValue && !EMAIL_PATTERN.test(emailValue)) {
       setFieldError(formField, EMAIL_FIELD_ERROR_TEXT);
+      return false;
+    }
+  }
+
+  if (field.id === "purchase-date") {
+    const dateValue = field.value.trim();
+    if (dateValue.length !== 10) {
+      setFieldError(formField, DATE_FIELD_LENGTH_ERROR_TEXT);
+      return false;
+    }
+
+    if (!DATE_PATTERN.test(dateValue)) {
+      setFieldError(formField, DATE_FIELD_ERROR_TEXT);
+      return false;
+    }
+
+    const [monthText, dayText, yearText] = dateValue.split("/");
+    const month = Number(monthText);
+    const day = Number(dayText);
+    const year = Number(yearText);
+    const isLeapYear = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+    const daysInMonth = [
+      31,
+      isLeapYear ? 29 : 28,
+      31,
+      30,
+      31,
+      30,
+      31,
+      31,
+      30,
+      31,
+      30,
+      31,
+    ];
+
+    if (month < 1 || month > 12 || day < 1 || day > daysInMonth[month - 1]) {
+      setFieldError(formField, DATE_FIELD_ERROR_TEXT);
       return false;
     }
   }

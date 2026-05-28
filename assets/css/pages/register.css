@@ -133,7 +133,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 5px;
   width: 100%;
   border: 1px dashed #bebebe;
   border-radius: 4px;
@@ -192,6 +192,11 @@
   display: block;
   line-height: 20px;
   color: #000;
+}
+
+.file-dropzone__title,
+.file-dropzone__text {
+  font-size: 14px;
 }
 
 .file-dropzone__browse {
@@ -444,6 +449,12 @@
   margin-bottom: 10px;
 }
 
+@media (max-width: 1023px) {
+  .file-dropzone__file-name {
+    max-width: 200px;
+  }
+}
+
 @media (max-width: 767px) {
   .page-register .hero-bg__image {
     object-position: center;
@@ -466,15 +477,6 @@
   .form-section--product-secondary .form-section__title {
     margin-bottom: 20px;
   }
-  
-  .file-dropzone__title,
-  .file-dropzone__text {
-    font-size: 14px;
-  }
-  
-  .file-dropzone__target {
-    gap: 5px;
-  }
 
   .warranty-submit {
     font-size: 14px;
@@ -490,6 +492,16 @@
 
   .info-box {
     padding: 20px;
+  }
+
+  .file-dropzone__selected {
+    position: relative;
+  }
+
+  .file-dropzone__check {
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 }
 
@@ -528,7 +540,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .warranty-form__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 50px;
@@ -561,5 +573,12 @@
     width: 1px;
     height: 100%;
     border-right: 1px dashed #BEBEBE;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .form-section--product-secondary,
+  .form-section--location {
+    margin-top: 40px;
   }
 }
