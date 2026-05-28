@@ -30,6 +30,10 @@ function initPurchasePriceMask() {
 
   let rawDigits = normalizeDigits(input.value);
 
+  const emitInputEvent = () => {
+    input.dispatchEvent(new Event("input", { bubbles: true }));
+  };
+
   const render = () => {
     input.value = formatCentsToCurrency(rawDigits);
   };
@@ -55,6 +59,7 @@ function initPurchasePriceMask() {
         rawDigits = "";
       }
       appendDigits(event.key);
+      emitInputEvent();
       return;
     }
 
@@ -66,6 +71,7 @@ function initPurchasePriceMask() {
         rawDigits = rawDigits.slice(0, -1);
       }
       render();
+      emitInputEvent();
       return;
     }
 
@@ -73,6 +79,7 @@ function initPurchasePriceMask() {
       event.preventDefault();
       rawDigits = "";
       render();
+      emitInputEvent();
       return;
     }
 
@@ -106,12 +113,14 @@ function initPurchasePriceMask() {
     }
 
     appendDigits(pastedDigits);
+    emitInputEvent();
   });
 
   input.addEventListener("cut", (event) => {
     event.preventDefault();
     rawDigits = "";
     render();
+    emitInputEvent();
   });
 
   input.addEventListener("input", () => {

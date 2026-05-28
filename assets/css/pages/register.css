@@ -535,7 +535,7 @@
   }
 
   .form-section--product-secondary {
-    margin-top: 50px;
+    margin-top: auto;
   }
 
   .form-section--location {
@@ -548,6 +548,8 @@
 
   .warranty-form__col:first-child {
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .warranty-form__col:first-child:after {
