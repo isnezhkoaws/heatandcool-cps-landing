@@ -303,6 +303,10 @@
   color: #4a6cf8;
 }
 
+.file-dropzone__replace:hover {
+  text-decoration: none;
+}
+
 .file-dropzone__replace:focus-visible,
 .file-dropzone__remove:focus-visible {
   outline: 2px solid #4a6cf8;
@@ -319,6 +323,14 @@
 .file-dropzone__remove svg {
   width: 100%;
   height: 100%;
+}
+
+.file-dropzone__remove path {
+  transition: .4s;
+}
+
+.file-dropzone__remove:hover {
+  color: var(--color-orange-dark);
 }
 
 .file-dropzone__error {
