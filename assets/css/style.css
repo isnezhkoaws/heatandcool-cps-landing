@@ -8,6 +8,7 @@
 @import 'ui/forms.css';
 @import 'components/header.css';
 @import 'components/footer.css';
+@import 'sections/hero-banner.css';
 @import 'sections/features-bar.css';
 @import 'sections/faq.css';
 @import 'pages/home.css';

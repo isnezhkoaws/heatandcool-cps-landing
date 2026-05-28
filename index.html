@@ -90,11 +90,14 @@
 
 		<main>
 			<section class="hero">
-				<div
-					class="hero-bg"
-					role="img"
-					aria-label="House with outdoor air conditioning unit"
-				></div>
+				<picture class="hero-bg">
+					<source media="(max-width: 767px)" srcset="assets/images/banner-mobile.jpg" />
+					<img
+						class="hero-bg__image"
+						src="assets/images/main_hero.jpg"
+						alt="House with outdoor air conditioning unit"
+					/>
+				</picture>
 				<div class="hero-overlay"></div>
 				<div class="container hero-content">
 					<p class="hero-badge">Heat &amp; Cool + CPS - Extended Warranty</p>
