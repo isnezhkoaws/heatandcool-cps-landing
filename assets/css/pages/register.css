@@ -90,12 +90,16 @@
 }
 
 .field-help {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   margin-top: 8px;
   font-size: 10px;
   line-height: 20px;
   color: #2d3a4d;
   text-decoration: underline;
   text-underline-offset: 2px;
+  cursor: help;
 }
 
 .form-field--invalid > label,

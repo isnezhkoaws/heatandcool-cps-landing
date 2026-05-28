@@ -2,6 +2,9 @@ const MENU_CLOSE_DURATION_MS = 350;
 const HEADER_BREAKPOINT = 1200;
 const MAX_UPLOAD_SIZE_BYTES = 10 * 1024 * 1024;
 const ALLOWED_UPLOAD_EXTENSIONS = new Set(["pdf", "jpg", "jpeg", "png"]);
+const TOOLTIP_DELAY_MS = 100;
+const FIELD_HELP_TOOLTIP_DEFAULT_TEXT =
+  "You can find this information on the product label or in your purchase documents.";
 
 function initMobileMenu() {
   const toggle = document.querySelector(".nav-toggle");
@@ -269,10 +272,66 @@ function initFileDropzones() {
   });
 }
 
+function initFieldHelpTooltips() {
+  const fieldHelpItems = document.querySelectorAll(".field-help");
+  if (!fieldHelpItems.length) return;
+
+  fieldHelpItems.forEach((fieldHelp) => {
+    const tooltipText = fieldHelp.dataset.tooltip?.trim() || FIELD_HELP_TOOLTIP_DEFAULT_TEXT;
+
+    let tooltip = fieldHelp.querySelector(".field-help__tooltip");
+    if (!tooltip) {
+      tooltip = document.createElement("span");
+      tooltip.className = "field-help__tooltip";
+      tooltip.textContent = tooltipText;
+      tooltip.setAttribute("role", "tooltip");
+      tooltip.setAttribute("aria-hidden", "true");
+      fieldHelp.appendChild(tooltip);
+    }
+
+    let showTimer = null;
+    let hideTimer = null;
+
+    const clearShowTimer = () => {
+      if (showTimer === null) return;
+      window.clearTimeout(showTimer);
+      showTimer = null;
+    };
+
+    const clearHideTimer = () => {
+      if (hideTimer === null) return;
+      window.clearTimeout(hideTimer);
+      hideTimer = null;
+    };
+
+    const showTooltip = () => {
+      clearHideTimer();
+      clearShowTimer();
+      showTimer = window.setTimeout(() => {
+        fieldHelp.classList.add("is-tooltip-visible");
+        tooltip.setAttribute("aria-hidden", "false");
+      }, TOOLTIP_DELAY_MS);
+    };
+
+    const hideTooltip = () => {
+      clearShowTimer();
+      clearHideTimer();
+      hideTimer = window.setTimeout(() => {
+        fieldHelp.classList.remove("is-tooltip-visible");
+        tooltip.setAttribute("aria-hidden", "true");
+      }, TOOLTIP_DELAY_MS);
+    };
+
+    fieldHelp.addEventListener("mouseenter", showTooltip);
+    fieldHelp.addEventListener("mouseleave", hideTooltip);
+  });
+}
+
 function initPageInteractions() {
   initMobileMenu();
   initFaqAccordion();
   initFileDropzones();
+  initFieldHelpTooltips();
 }
 
 if (document.readyState === "loading") {
