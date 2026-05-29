@@ -454,10 +454,6 @@
   padding: 20px 0;
 }
 
-.page-register .hero-overlay {
-  display: none;
-}
-
 .page-register .hero-title {
   font-size: 40px;
   line-height: 45px;
@@ -594,6 +590,10 @@
     width: 1px;
     height: 100%;
     border-right: 1px dashed #BEBEBE;
+  }
+
+  .page-register .hero-overlay {
+    display: none;
   }
 }
 
